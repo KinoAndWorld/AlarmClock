@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE76148D1713B4B900FF4E20 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE76148C1713B4B900FF4E20 /* test.mp3 */; };
 		CECAA31B17129CF200516B8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31A17129CF200516B8A /* UIKit.framework */; };
 		CECAA31D17129CF200516B8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31C17129CF200516B8A /* Foundation.framework */; };
 		CECAA31F17129CF200516B8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31E17129CF200516B8A /* CoreGraphics.framework */; };
@@ -21,6 +22,28 @@
 		CECAA33B17129CF200516B8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31C17129CF200516B8A /* Foundation.framework */; };
 		CECAA34317129CF200516B8A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CECAA34117129CF200516B8A /* InfoPlist.strings */; };
 		CECAA34617129CF200516B8A /* AlarmClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA34517129CF200516B8A /* AlarmClockTests.m */; };
+		CECAA35217129D9600516B8A /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA35017129D9600516B8A /* loginViewController.m */; };
+		CECAA35317129D9600516B8A /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CECAA35117129D9600516B8A /* loginViewController.xib */; };
+		CECAA3621712A15C00516B8A /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA3571712A15C00516B8A /* NSObject+SBJSON.m */; };
+		CECAA3631712A15C00516B8A /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA3591712A15C00516B8A /* NSString+SBJSON.m */; };
+		CECAA3641712A15C00516B8A /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA35B1712A15C00516B8A /* SBJSON.m */; };
+		CECAA3651712A15C00516B8A /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA35D1712A15C00516B8A /* SBJsonBase.m */; };
+		CECAA3661712A15C00516B8A /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA35F1712A15C00516B8A /* SBJsonParser.m */; };
+		CECAA3671712A15C00516B8A /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA3611712A15C00516B8A /* SBJsonWriter.m */; };
+		CECAA4301712A42C00516B8A /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA41E1712A42C00516B8A /* ASIAuthenticationDialog.m */; };
+		CECAA4321712A42C00516B8A /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA4201712A42C00516B8A /* ASIFormDataRequest.m */; };
+		CECAA4341712A42C00516B8A /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA4221712A42C00516B8A /* ASIHTTPRequest.m */; };
+		CECAA4361712A42C00516B8A /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA4261712A42C00516B8A /* ASIInputStream.m */; };
+		CECAA4381712A42C00516B8A /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA4281712A42C00516B8A /* ASINetworkQueue.m */; };
+		CECAA43A1712A42C00516B8A /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA42A1712A42C00516B8A /* ASINSStringAdditions.m */; };
+		CECAA43C1712A42C00516B8A /* NSHTTPCookieAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA42D1712A42C00516B8A /* NSHTTPCookieAdditions.m */; };
+		CECAA43E1712A42C00516B8A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA42F1712A42C00516B8A /* Reachability.m */; };
+		CECAA4411712A4B400516B8A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4401712A4B400516B8A /* CFNetwork.framework */; };
+		CECAA4431712A4BD00516B8A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4421712A4BD00516B8A /* MobileCoreServices.framework */; };
+		CECAA4451712A4D400516B8A /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4441712A4D400516B8A /* libbz2.1.0.dylib */; };
+		CECAA4471712A4F900516B8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4461712A4F900516B8A /* SystemConfiguration.framework */; };
+		CECAA4491712A59900516B8A /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4481712A59900516B8A /* libz.1.1.3.dylib */; };
+		CECAA44F1713199A00516B8A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CECAA44E1713199A00516B8A /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE76148C1713B4B900FF4E20 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
 		CECAA31717129CF200516B8A /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECAA31A17129CF200516B8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CECAA31C17129CF200516B8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +77,47 @@
 		CECAA34217129CF200516B8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CECAA34417129CF200516B8A /* AlarmClockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmClockTests.h; sourceTree = "<group>"; };
 		CECAA34517129CF200516B8A /* AlarmClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlarmClockTests.m; sourceTree = "<group>"; };
+		CECAA34F17129D9600516B8A /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
+		CECAA35017129D9600516B8A /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
+		CECAA35117129D9600516B8A /* loginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
+		CECAA3551712A15C00516B8A /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		CECAA3561712A15C00516B8A /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		CECAA3571712A15C00516B8A /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		CECAA3581712A15C00516B8A /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		CECAA3591712A15C00516B8A /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		CECAA35A1712A15C00516B8A /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		CECAA35B1712A15C00516B8A /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		CECAA35C1712A15C00516B8A /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		CECAA35D1712A15C00516B8A /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		CECAA35E1712A15C00516B8A /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		CECAA35F1712A15C00516B8A /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		CECAA3601712A15C00516B8A /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		CECAA3611712A15C00516B8A /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		CECAA41D1712A42C00516B8A /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		CECAA41E1712A42C00516B8A /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		CECAA41F1712A42C00516B8A /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		CECAA4201712A42C00516B8A /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		CECAA4211712A42C00516B8A /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		CECAA4221712A42C00516B8A /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		CECAA4231712A42C00516B8A /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		CECAA4241712A42C00516B8A /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		CECAA4251712A42C00516B8A /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		CECAA4261712A42C00516B8A /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		CECAA4271712A42C00516B8A /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		CECAA4281712A42C00516B8A /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		CECAA4291712A42C00516B8A /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSStringAdditions.h; sourceTree = "<group>"; };
+		CECAA42A1712A42C00516B8A /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINSStringAdditions.m; sourceTree = "<group>"; };
+		CECAA42B1712A42C00516B8A /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		CECAA42C1712A42C00516B8A /* NSHTTPCookieAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSHTTPCookieAdditions.h; sourceTree = "<group>"; };
+		CECAA42D1712A42C00516B8A /* NSHTTPCookieAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSHTTPCookieAdditions.m; sourceTree = "<group>"; };
+		CECAA42E1712A42C00516B8A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CECAA42F1712A42C00516B8A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CECAA4401712A4B400516B8A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CECAA4421712A4BD00516B8A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CECAA4441712A4D400516B8A /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.dylib; path = usr/lib/libbz2.1.0.dylib; sourceTree = SDKROOT; };
+		CECAA4461712A4F900516B8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CECAA4481712A59900516B8A /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		CECAA44E1713199A00516B8A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +125,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECAA4491712A59900516B8A /* libz.1.1.3.dylib in Frameworks */,
+				CECAA4471712A4F900516B8A /* SystemConfiguration.framework in Frameworks */,
+				CECAA4451712A4D400516B8A /* libbz2.1.0.dylib in Frameworks */,
+				CECAA31F17129CF200516B8A /* CoreGraphics.framework in Frameworks */,
+				CECAA4431712A4BD00516B8A /* MobileCoreServices.framework in Frameworks */,
+				CECAA4411712A4B400516B8A /* CFNetwork.framework in Frameworks */,
 				CECAA31B17129CF200516B8A /* UIKit.framework in Frameworks */,
 				CECAA31D17129CF200516B8A /* Foundation.framework in Frameworks */,
-				CECAA31F17129CF200516B8A /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +152,14 @@
 		CECAA30E17129CF200516B8A = {
 			isa = PBXGroup;
 			children = (
+				CECAA4481712A59900516B8A /* libz.1.1.3.dylib */,
+				CECAA4461712A4F900516B8A /* SystemConfiguration.framework */,
+				CECAA4441712A4D400516B8A /* libbz2.1.0.dylib */,
+				CECAA4421712A4BD00516B8A /* MobileCoreServices.framework */,
+				CECAA4401712A4B400516B8A /* CFNetwork.framework */,
 				CECAA32017129CF200516B8A /* AlarmClock */,
+				CECAA41C1712A42C00516B8A /* ASIHTTPRequest */,
+				CECAA3541712A15C00516B8A /* JSON */,
 				CECAA33E17129CF200516B8A /* AlarmClockTests */,
 				CECAA31917129CF200516B8A /* Frameworks */,
 				CECAA31817129CF200516B8A /* Products */,
@@ -114,6 +191,11 @@
 			children = (
 				CECAA32917129CF200516B8A /* AppDelegate.h */,
 				CECAA32A17129CF200516B8A /* AppDelegate.m */,
+				CECAA34F17129D9600516B8A /* loginViewController.h */,
+				CECAA35017129D9600516B8A /* loginViewController.m */,
+				CECAA35117129D9600516B8A /* loginViewController.xib */,
+				CE76148C1713B4B900FF4E20 /* test.mp3 */,
+				CECAA44E1713199A00516B8A /* 1.png */,
 				CECAA32117129CF200516B8A /* Supporting Files */,
 			);
 			path = AlarmClock;
@@ -150,6 +232,52 @@
 				CECAA34117129CF200516B8A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CECAA3541712A15C00516B8A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				CECAA3551712A15C00516B8A /* JSON.h */,
+				CECAA3561712A15C00516B8A /* NSObject+SBJSON.h */,
+				CECAA3571712A15C00516B8A /* NSObject+SBJSON.m */,
+				CECAA3581712A15C00516B8A /* NSString+SBJSON.h */,
+				CECAA3591712A15C00516B8A /* NSString+SBJSON.m */,
+				CECAA35A1712A15C00516B8A /* SBJSON.h */,
+				CECAA35B1712A15C00516B8A /* SBJSON.m */,
+				CECAA35C1712A15C00516B8A /* SBJsonBase.h */,
+				CECAA35D1712A15C00516B8A /* SBJsonBase.m */,
+				CECAA35E1712A15C00516B8A /* SBJsonParser.h */,
+				CECAA35F1712A15C00516B8A /* SBJsonParser.m */,
+				CECAA3601712A15C00516B8A /* SBJsonWriter.h */,
+				CECAA3611712A15C00516B8A /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		CECAA41C1712A42C00516B8A /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				CECAA41D1712A42C00516B8A /* ASIAuthenticationDialog.h */,
+				CECAA41E1712A42C00516B8A /* ASIAuthenticationDialog.m */,
+				CECAA41F1712A42C00516B8A /* ASIFormDataRequest.h */,
+				CECAA4201712A42C00516B8A /* ASIFormDataRequest.m */,
+				CECAA4211712A42C00516B8A /* ASIHTTPRequest.h */,
+				CECAA4221712A42C00516B8A /* ASIHTTPRequest.m */,
+				CECAA4231712A42C00516B8A /* ASIHTTPRequestConfig.h */,
+				CECAA4241712A42C00516B8A /* ASIHTTPRequestDelegate.h */,
+				CECAA4251712A42C00516B8A /* ASIInputStream.h */,
+				CECAA4261712A42C00516B8A /* ASIInputStream.m */,
+				CECAA4271712A42C00516B8A /* ASINetworkQueue.h */,
+				CECAA4281712A42C00516B8A /* ASINetworkQueue.m */,
+				CECAA4291712A42C00516B8A /* ASINSStringAdditions.h */,
+				CECAA42A1712A42C00516B8A /* ASINSStringAdditions.m */,
+				CECAA42B1712A42C00516B8A /* ASIProgressDelegate.h */,
+				CECAA42C1712A42C00516B8A /* NSHTTPCookieAdditions.h */,
+				CECAA42D1712A42C00516B8A /* NSHTTPCookieAdditions.m */,
+				CECAA42E1712A42C00516B8A /* Reachability.h */,
+				CECAA42F1712A42C00516B8A /* Reachability.m */,
+			);
+			path = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +355,9 @@
 				CECAA32D17129CF200516B8A /* Default.png in Resources */,
 				CECAA32F17129CF200516B8A /* Default@2x.png in Resources */,
 				CECAA33117129CF200516B8A /* Default-568h@2x.png in Resources */,
+				CECAA35317129D9600516B8A /* loginViewController.xib in Resources */,
+				CECAA44F1713199A00516B8A /* 1.png in Resources */,
+				CE76148D1713B4B900FF4E20 /* test.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +394,21 @@
 			files = (
 				CECAA32717129CF200516B8A /* main.m in Sources */,
 				CECAA32B17129CF200516B8A /* AppDelegate.m in Sources */,
+				CECAA35217129D9600516B8A /* loginViewController.m in Sources */,
+				CECAA3621712A15C00516B8A /* NSObject+SBJSON.m in Sources */,
+				CECAA3631712A15C00516B8A /* NSString+SBJSON.m in Sources */,
+				CECAA3641712A15C00516B8A /* SBJSON.m in Sources */,
+				CECAA3651712A15C00516B8A /* SBJsonBase.m in Sources */,
+				CECAA3661712A15C00516B8A /* SBJsonParser.m in Sources */,
+				CECAA3671712A15C00516B8A /* SBJsonWriter.m in Sources */,
+				CECAA4301712A42C00516B8A /* ASIAuthenticationDialog.m in Sources */,
+				CECAA4321712A42C00516B8A /* ASIFormDataRequest.m in Sources */,
+				CECAA4341712A42C00516B8A /* ASIHTTPRequest.m in Sources */,
+				CECAA4361712A42C00516B8A /* ASIInputStream.m in Sources */,
+				CECAA4381712A42C00516B8A /* ASINetworkQueue.m in Sources */,
+				CECAA43A1712A42C00516B8A /* ASINSStringAdditions.m in Sources */,
+				CECAA43C1712A42C00516B8A /* NSHTTPCookieAdditions.m in Sources */,
+				CECAA43E1712A42C00516B8A /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +456,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -342,7 +488,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -369,6 +515,7 @@
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClock/AlarmClock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -380,6 +527,7 @@
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClock/AlarmClock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +585,7 @@
 				CECAA34B17129CF200516B8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CECAA34C17129CF200516B8A /* Build configuration list for PBXNativeTarget "AlarmClockTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +594,7 @@
 				CECAA34E17129CF200516B8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
