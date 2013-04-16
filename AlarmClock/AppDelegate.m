@@ -7,18 +7,17 @@
 //
 
 #import "AppDelegate.h"
-#import "loginViewController.h"
 
 @implementation AppDelegate
 
+@synthesize pRootViewCon;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+    pRootViewCon = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:pRootViewCon];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    loginViewController *cc = [[loginViewController alloc] init];
-    [self.window setRootViewController:cc];
     return YES;
 }
 

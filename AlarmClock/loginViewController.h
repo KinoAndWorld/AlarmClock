@@ -10,7 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "SBJson.h"
-@interface loginViewController : UIViewController{
+@interface loginViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     IBOutlet UITextField *name;
     IBOutlet UITextField *password;
     
@@ -18,6 +18,7 @@
     IBOutlet UITextField *password2;
     IBOutlet UITextField *nikeName;
 }
+@property (nonatomic, retain)IBOutlet UITableView *tableView;
 @property(nonatomic,retain)UITextField *name;
 @property(nonatomic,retain)UITextField *password;
 @property(nonatomic,retain)UITextField *name2;

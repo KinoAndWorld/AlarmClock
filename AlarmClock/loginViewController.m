@@ -13,7 +13,7 @@
 @end
 
 @implementation loginViewController
-
+@synthesize tableView;
 @synthesize name,password,name2,password2,nikeName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +39,7 @@
 
 -(IBAction)login:(id)sender
 {
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://localhost/~user/AlarmClock/User/Login.php"]];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://222.212.71.227/~user/AlarmClock/User/Login.php"]];
     [request setDelegate:self];
     [request setUsername:@"login"];
 
@@ -50,7 +50,7 @@
 }
 -(IBAction)regiest:(id)sender
 {
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://localhost/~user/AlarmClock/User/Regiest.php"]];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://222.212.71.227/~user/AlarmClock/User/Regiest.php"]];
     [request setDelegate:self];
     [request setUsername:@"regiest"];
     
@@ -62,7 +62,7 @@
 }
 -(IBAction)selectPic:(id)sender
 {
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://localhost/~user/AlarmClock/User/UploadUserPic.php"]];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://222.212.71.227/~user/AlarmClock/User/UploadUserPic.php"]];
     [request setDelegate:self];
     [request setUsername:@"regiest"];
     NSString* path =  [[NSBundle mainBundle] pathForResource:@"1" ofType:@"png"];
@@ -72,7 +72,7 @@
 }
 -(IBAction)uploadMusic:(id)sender
 {
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://localhost/~user/AlarmClock/User/UploadUserMusic.php"]];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:@"http://222.212.71.227/~user/AlarmClock/User/UploadUserMusic.php"]];
     [request setDelegate:self];
     [request setUsername:@"regiest"];
     NSString* path =  [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp3"];
@@ -161,6 +161,59 @@
     }
     NSLog(@"Every Thing in the dir:%@",fileList);
     NSLog(@"All folders:%@",dirArray);
+}
+
+
+#pragma mark - Standard TableView delegates
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    if (indexPath.section == 0) {
+        return 120;
+    }
+    return 44;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    }
+    
+    return 4;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+
+{
+    
+    CGRect frameRect = CGRectMake(35, 0, 100, 40);
+    
+    UILabel *label = [[[UILabel alloc] initWithFrame:frameRect] autorelease];
+    
+    label.text=@"      帐户";
+    label.backgroundColor = [UIColor clearColor];
+    return label;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 44;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *NIBName =@"LoginContentCell";
+    NSArray *nib = [[NSBundle mainBundle]loadNibNamed:NIBName owner:self options:nil];
+    UITableViewCell *cell = [nib objectAtIndex:0];
+    NSLog(@"%f",cell.backgroundView.frame.size.height);
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end
