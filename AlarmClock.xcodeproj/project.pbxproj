@@ -19,9 +19,33 @@
 		CE044FBB171D290600DBC32A /* ui_regiestUeserNameIcon_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FB6171D290600DBC32A /* ui_regiestUeserNameIcon_gray.png */; };
 		CE044FBC171D290600DBC32A /* ui_regiestUeserNameIcon_green.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FB7171D290600DBC32A /* ui_regiestUeserNameIcon_green.png */; };
 		CE044FBD171D290600DBC32A /* ui_regiestUeserNameIcon_red.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FB8171D290600DBC32A /* ui_regiestUeserNameIcon_red.png */; };
+		CE044FC6171D4DBF00DBC32A /* color6.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FC5171D4DBF00DBC32A /* color6.png */; };
+		CE044FC9171D4E5E00DBC32A /* ErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE044FC8171D4E5E00DBC32A /* ErrorView.m */; };
+		CE044FCB171D54CC00DBC32A /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE044FCA171D54CB00DBC32A /* ErrorView.xib */; };
+		CE06B951171E3B7C00556A00 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B950171E3B7C00556A00 /* JSONKit.m */; };
+		CE06B954171E833C00556A00 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B950171E3B7C00556A00 /* JSONKit.m */; };
+		CE06B9DF171E8B0400556A00 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE06B9D5171E8B0400556A00 /* SinaWeibo.bundle */; };
+		CE06B9E0171E8B0400556A00 /* SinaWeibo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE06B9D5171E8B0400556A00 /* SinaWeibo.bundle */; };
+		CE06B9E1171E8B0400556A00 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9D7171E8B0400556A00 /* SinaWeibo.m */; };
+		CE06B9E2171E8B0400556A00 /* SinaWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9D7171E8B0400556A00 /* SinaWeibo.m */; };
+		CE06B9E3171E8B0400556A00 /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9D9171E8B0400556A00 /* SinaWeiboAuthorizeView.m */; };
+		CE06B9E4171E8B0400556A00 /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9D9171E8B0400556A00 /* SinaWeiboAuthorizeView.m */; };
+		CE06B9E5171E8B0400556A00 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */; };
+		CE06B9E6171E8B0400556A00 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */; };
+		CE1F996B1720EB60009611A4 /* ContentHeadCell_logIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CE759C77171FFD960091353C /* ContentHeadCell_logIn.m */; };
+		CE1F997F1721231B009611A4 /* EMAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F997E1721231B009611A4 /* EMAsyncImageView.m */; };
+		CE1F998117212591009611A4 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A8447171AEC28000E42E5 /* ContentCell.m */; };
+		CE1F998317213B04009611A4 /* ui_loginFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1F998217213B04009611A4 /* ui_loginFrame.png */; };
+		CE1F998417213B04009611A4 /* ui_loginFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1F998217213B04009611A4 /* ui_loginFrame.png */; };
+		CE1F998817213B31009611A4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F998617213B30009611A4 /* LoginController.m */; };
+		CE1F998917213B31009611A4 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F998617213B30009611A4 /* LoginController.m */; };
+		CE1F998A17213B31009611A4 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1F998717213B30009611A4 /* LoginController.xib */; };
+		CE1F998B17213B31009611A4 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1F998717213B30009611A4 /* LoginController.xib */; };
 		CE2E52E1171BF52F0047D185 /* ui_login.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E52DF171BF52F0047D185 /* ui_login.png */; };
 		CE2E52E2171BF52F0047D185 /* ui_regiest.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E52E0171BF52F0047D185 /* ui_regiest.png */; };
 		CE2E52E8171C44F00047D185 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2E52E7171C44F00047D185 /* QuartzCore.framework */; };
+		CE3FBA9B172774E400738916 /* ui_noButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA99172774E400738916 /* ui_noButton.png */; };
+		CE3FBA9C172774E400738916 /* ui_yesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA9A172774E400738916 /* ui_yesButton.png */; };
 		CE5A83CA171A5D4E000E42E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A83C9171A5D4E000E42E5 /* RootViewController.m */; };
 		CE5A83CB171A5D86000E42E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A83C9171A5D4E000E42E5 /* RootViewController.m */; };
 		CE5A83D1171A70D3000E42E5 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A83D0171A70D3000E42E5 /* RootViewController.xib */; };
@@ -70,16 +94,42 @@
 		CE5A8442171AEB8D000E42E5 /* ContentHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A8440171AEB8D000E42E5 /* ContentHeadCell.m */; };
 		CE5A8444171AEBA7000E42E5 /* ContentHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A8443171AEBA7000E42E5 /* ContentHeadCell.xib */; };
 		CE5A8445171AEBA7000E42E5 /* ContentHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A8443171AEBA7000E42E5 /* ContentHeadCell.xib */; };
-		CE5A8449171AEC28000E42E5 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A8447171AEC28000E42E5 /* ContentCell.m */; };
 		CE5A844C171AF10A000E42E5 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844B171AF10A000E42E5 /* ContentCell.xib */; };
 		CE5A844F171AF357000E42E5 /* color1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844D171AF357000E42E5 /* color1.png */; };
 		CE5A8450171AF357000E42E5 /* color2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844E171AF357000E42E5 /* color2.png */; };
+		CE759C59171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE759C57171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle */; };
+		CE759C5A171F8DCA0091353C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C58171F8DCA0091353C /* TencentOpenAPI.framework */; };
+		CE759C5C171F918E0091353C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C5B171F918E0091353C /* libstdc++.dylib */; };
+		CE759C5E171F91A30091353C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C5D171F91A30091353C /* CoreTelephony.framework */; };
+		CE759C60171F91B80091353C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C5F171F91B80091353C /* CoreFoundation.framework */; };
+		CE759C62171F91CB0091353C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C61171F91CB0091353C /* libsqlite3.dylib */; };
+		CE759C69171FD0CB0091353C /* ui_log_backGround.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C63171FD0CA0091353C /* ui_log_backGround.png */; };
+		CE759C6A171FD0CB0091353C /* ui_log_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C64171FD0CB0091353C /* ui_log_button.png */; };
+		CE759C6B171FD0CB0091353C /* ui_log_dida.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C65171FD0CB0091353C /* ui_log_dida.png */; };
+		CE759C6C171FD0CB0091353C /* ui_log_qq.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C66171FD0CB0091353C /* ui_log_qq.png */; };
+		CE759C6D171FD0CB0091353C /* ui_log_renren.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C67171FD0CB0091353C /* ui_log_renren.png */; };
+		CE759C6E171FD0CB0091353C /* ui_log_sina.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C68171FD0CB0091353C /* ui_log_sina.png */; };
+		CE759C72171FD0E50091353C /* LoginChooseViewConViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE759C70171FD0E50091353C /* LoginChooseViewConViewController.m */; };
+		CE759C73171FD0E50091353C /* LoginChooseViewConViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE759C71171FD0E50091353C /* LoginChooseViewConViewController.xib */; };
+		CE759C75171FD8100091353C /* ui_buttonBackBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = CE759C74171FD8100091353C /* ui_buttonBackBlue.png */; };
+		CE759C79171FFD970091353C /* ContentHeadCell_logIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CE759C77171FFD960091353C /* ContentHeadCell_logIn.m */; };
+		CE759C7A171FFD970091353C /* ContentHeadCell_logIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE759C78171FFD960091353C /* ContentHeadCell_logIn.xib */; };
+		CE759C7B171FFDAF0091353C /* ContentHeadCell_logIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE759C78171FFD960091353C /* ContentHeadCell_logIn.xib */; };
 		CE76148D1713B4B900FF4E20 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE76148C1713B4B900FF4E20 /* test.mp3 */; };
+		CE80D9DD17262AFB00A5C773 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE80D9DC17262AFB00A5C773 /* AVFoundation.framework */; };
+		CE80D9E017262B8500A5C773 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE80D9DF17262B8500A5C773 /* libmp3lame.a */; };
+		CE80D9E117262B8500A5C773 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE80D9DF17262B8500A5C773 /* libmp3lame.a */; };
+		CE80D9E517262D0E00A5C773 /* SoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE80D9E417262D0E00A5C773 /* SoundView.m */; };
+		CE80D9E617262D0E00A5C773 /* SoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE80D9E417262D0E00A5C773 /* SoundView.m */; };
+		CE80D9E817262D3700A5C773 /* SoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80D9E717262D3700A5C773 /* SoundView.xib */; };
+		CE80D9E917262D3700A5C773 /* SoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE80D9E717262D3700A5C773 /* SoundView.xib */; };
+		CEAB20CB1729785C0002FC41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAB20CD1729785C0002FC41 /* main.m */; };
+		CEAB8764172A18A3003D2200 /* ui_titleButtonback.png in Resources */ = {isa = PBXBuildFile; fileRef = CEAB8763172A18A3003D2200 /* ui_titleButtonback.png */; };
+		CEAB8767172A1F19003D2200 /* FriendCotentViewCon.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAB8766172A1F19003D2200 /* FriendCotentViewCon.m */; };
 		CECAA31B17129CF200516B8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31A17129CF200516B8A /* UIKit.framework */; };
 		CECAA31D17129CF200516B8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31C17129CF200516B8A /* Foundation.framework */; };
 		CECAA31F17129CF200516B8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA31E17129CF200516B8A /* CoreGraphics.framework */; };
 		CECAA32517129CF200516B8A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CECAA32317129CF200516B8A /* InfoPlist.strings */; };
-		CECAA32717129CF200516B8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA32617129CF200516B8A /* main.m */; };
 		CECAA32B17129CF200516B8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECAA32A17129CF200516B8A /* AppDelegate.m */; };
 		CECAA32D17129CF200516B8A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CECAA32C17129CF200516B8A /* Default.png */; };
 		CECAA32F17129CF200516B8A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CECAA32E17129CF200516B8A /* Default@2x.png */; };
@@ -138,9 +188,31 @@
 		CE044FB7171D290600DBC32A /* ui_regiestUeserNameIcon_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_regiestUeserNameIcon_green.png; path = PsExport/ui_regiestUeserNameIcon_green.png; sourceTree = SOURCE_ROOT; };
 		CE044FB8171D290600DBC32A /* ui_regiestUeserNameIcon_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_regiestUeserNameIcon_red.png; path = PsExport/ui_regiestUeserNameIcon_red.png; sourceTree = SOURCE_ROOT; };
 		CE044FBF171D349F00DBC32A /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		CE044FC5171D4DBF00DBC32A /* color6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color6.png; sourceTree = SOURCE_ROOT; };
+		CE044FC7171D4E5E00DBC32A /* ErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorView.h; sourceTree = "<group>"; };
+		CE044FC8171D4E5E00DBC32A /* ErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorView.m; sourceTree = "<group>"; };
+		CE044FCA171D54CB00DBC32A /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		CE06B94F171E3B7C00556A00 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		CE06B950171E3B7C00556A00 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		CE06B9D5171E8B0400556A00 /* SinaWeibo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SinaWeibo.bundle; sourceTree = "<group>"; };
+		CE06B9D6171E8B0400556A00 /* SinaWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeibo.h; sourceTree = "<group>"; };
+		CE06B9D7171E8B0400556A00 /* SinaWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeibo.m; sourceTree = "<group>"; };
+		CE06B9D8171E8B0400556A00 /* SinaWeiboAuthorizeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboAuthorizeView.h; sourceTree = "<group>"; };
+		CE06B9D9171E8B0400556A00 /* SinaWeiboAuthorizeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboAuthorizeView.m; sourceTree = "<group>"; };
+		CE06B9DA171E8B0400556A00 /* SinaWeiboConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboConstants.h; sourceTree = "<group>"; };
+		CE06B9DB171E8B0400556A00 /* SinaWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboRequest.h; sourceTree = "<group>"; };
+		CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboRequest.m; sourceTree = "<group>"; };
+		CE1F997D1721231B009611A4 /* EMAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAsyncImageView.h; sourceTree = "<group>"; };
+		CE1F997E1721231B009611A4 /* EMAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAsyncImageView.m; sourceTree = "<group>"; };
+		CE1F998217213B04009611A4 /* ui_loginFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_loginFrame.png; sourceTree = "<group>"; };
+		CE1F998517213B30009611A4 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		CE1F998617213B30009611A4 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		CE1F998717213B30009611A4 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		CE2E52DF171BF52F0047D185 /* ui_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_login.png; sourceTree = "<group>"; };
 		CE2E52E0171BF52F0047D185 /* ui_regiest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_regiest.png; sourceTree = "<group>"; };
 		CE2E52E7171C44F00047D185 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE3FBA99172774E400738916 /* ui_noButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_noButton.png; path = PsExport/ui_noButton.png; sourceTree = SOURCE_ROOT; };
+		CE3FBA9A172774E400738916 /* ui_yesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_yesButton.png; path = PsExport/ui_yesButton.png; sourceTree = SOURCE_ROOT; };
 		CE5A83C8171A5D4E000E42E5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CE5A83C9171A5D4E000E42E5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		CE5A83D0171A70D3000E42E5 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -173,14 +245,42 @@
 		CE5A844B171AF10A000E42E5 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		CE5A844D171AF357000E42E5 /* color1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color1.png; sourceTree = "<group>"; };
 		CE5A844E171AF357000E42E5 /* color2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color2.png; sourceTree = "<group>"; };
+		CE759C57171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		CE759C58171F8DCA0091353C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		CE759C5B171F918E0091353C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		CE759C5D171F91A30091353C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CE759C5F171F91B80091353C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CE759C61171F91CB0091353C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CE759C63171FD0CA0091353C /* ui_log_backGround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_backGround.png; sourceTree = "<group>"; };
+		CE759C64171FD0CB0091353C /* ui_log_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_button.png; sourceTree = "<group>"; };
+		CE759C65171FD0CB0091353C /* ui_log_dida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_dida.png; sourceTree = "<group>"; };
+		CE759C66171FD0CB0091353C /* ui_log_qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_qq.png; sourceTree = "<group>"; };
+		CE759C67171FD0CB0091353C /* ui_log_renren.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_renren.png; sourceTree = "<group>"; };
+		CE759C68171FD0CB0091353C /* ui_log_sina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_log_sina.png; sourceTree = "<group>"; };
+		CE759C6F171FD0E40091353C /* LoginChooseViewConViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginChooseViewConViewController.h; sourceTree = "<group>"; };
+		CE759C70171FD0E50091353C /* LoginChooseViewConViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginChooseViewConViewController.m; sourceTree = "<group>"; };
+		CE759C71171FD0E50091353C /* LoginChooseViewConViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginChooseViewConViewController.xib; sourceTree = "<group>"; };
+		CE759C74171FD8100091353C /* ui_buttonBackBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_buttonBackBlue.png; sourceTree = "<group>"; };
+		CE759C76171FFD950091353C /* ContentHeadCell_logIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentHeadCell_logIn.h; sourceTree = "<group>"; };
+		CE759C77171FFD960091353C /* ContentHeadCell_logIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentHeadCell_logIn.m; sourceTree = "<group>"; };
+		CE759C78171FFD960091353C /* ContentHeadCell_logIn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentHeadCell_logIn.xib; sourceTree = "<group>"; };
 		CE76148C1713B4B900FF4E20 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		CE80D9DC17262AFB00A5C773 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CE80D9DE17262B8500A5C773 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		CE80D9DF17262B8500A5C773 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		CE80D9E317262D0E00A5C773 /* SoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundView.h; sourceTree = "<group>"; };
+		CE80D9E417262D0E00A5C773 /* SoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundView.m; sourceTree = "<group>"; };
+		CE80D9E717262D3700A5C773 /* SoundView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundView.xib; sourceTree = "<group>"; };
+		CEAB20CC1729785C0002FC41 /* en */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = en; path = en.lproj/main.m; sourceTree = "<group>"; };
+		CEAB8763172A18A3003D2200 /* ui_titleButtonback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_titleButtonback.png; sourceTree = "<group>"; };
+		CEAB8765172A1F19003D2200 /* FriendCotentViewCon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCotentViewCon.h; sourceTree = "<group>"; };
+		CEAB8766172A1F19003D2200 /* FriendCotentViewCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCotentViewCon.m; sourceTree = "<group>"; };
 		CECAA31717129CF200516B8A /* AlarmClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECAA31A17129CF200516B8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CECAA31C17129CF200516B8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CECAA31E17129CF200516B8A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CECAA32217129CF200516B8A /* AlarmClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AlarmClock-Info.plist"; sourceTree = "<group>"; };
 		CECAA32417129CF200516B8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CECAA32617129CF200516B8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CECAA32817129CF200516B8A /* AlarmClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlarmClock-Prefix.pch"; sourceTree = "<group>"; };
 		CECAA32917129CF200516B8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CECAA32A17129CF200516B8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -241,6 +341,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE80D9DD17262AFB00A5C773 /* AVFoundation.framework in Frameworks */,
+				CE759C62171F91CB0091353C /* libsqlite3.dylib in Frameworks */,
+				CE759C60171F91B80091353C /* CoreFoundation.framework in Frameworks */,
+				CE759C5E171F91A30091353C /* CoreTelephony.framework in Frameworks */,
+				CE759C5C171F918E0091353C /* libstdc++.dylib in Frameworks */,
 				CE2E52E8171C44F00047D185 /* QuartzCore.framework in Frameworks */,
 				CECAA4491712A59900516B8A /* libz.1.1.3.dylib in Frameworks */,
 				CECAA4471712A4F900516B8A /* SystemConfiguration.framework in Frameworks */,
@@ -250,6 +355,8 @@
 				CECAA4411712A4B400516B8A /* CFNetwork.framework in Frameworks */,
 				CECAA31B17129CF200516B8A /* UIKit.framework in Frameworks */,
 				CECAA31D17129CF200516B8A /* Foundation.framework in Frameworks */,
+				CE759C5A171F8DCA0091353C /* TencentOpenAPI.framework in Frameworks */,
+				CE80D9E017262B8500A5C773 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,15 +367,86 @@
 				CECAA33917129CF200516B8A /* SenTestingKit.framework in Frameworks */,
 				CECAA33A17129CF200516B8A /* UIKit.framework in Frameworks */,
 				CECAA33B17129CF200516B8A /* Foundation.framework in Frameworks */,
+				CE80D9E117262B8500A5C773 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE06B9D0171E8B0400556A00 /* sinaweibo_ios_sdk */ = {
+			isa = PBXGroup;
+			children = (
+				CE06B9D4171E8B0400556A00 /* SinaWeibo */,
+			);
+			path = sinaweibo_ios_sdk;
+			sourceTree = "<group>";
+		};
+		CE06B9D4171E8B0400556A00 /* SinaWeibo */ = {
+			isa = PBXGroup;
+			children = (
+				CE06B9D5171E8B0400556A00 /* SinaWeibo.bundle */,
+				CE06B9D6171E8B0400556A00 /* SinaWeibo.h */,
+				CE06B9D7171E8B0400556A00 /* SinaWeibo.m */,
+				CE06B9D8171E8B0400556A00 /* SinaWeiboAuthorizeView.h */,
+				CE06B9D9171E8B0400556A00 /* SinaWeiboAuthorizeView.m */,
+				CE06B9DA171E8B0400556A00 /* SinaWeiboConstants.h */,
+				CE06B9DB171E8B0400556A00 /* SinaWeiboRequest.h */,
+				CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */,
+			);
+			path = SinaWeibo;
+			sourceTree = "<group>";
+		};
+		CE06B9E7171E8BF600556A00 /* UserAction */ = {
+			isa = PBXGroup;
+			children = (
+				CECAA34F17129D9600516B8A /* loginViewController.h */,
+				CECAA35017129D9600516B8A /* loginViewController.m */,
+				CECAA35117129D9600516B8A /* loginViewController.xib */,
+				CE044FA5171CEC3E00DBC32A /* RegiestView.h */,
+				CE044FA6171CEC3E00DBC32A /* RegiestView.m */,
+				CE044FA7171CEC3E00DBC32A /* RegiestView.xib */,
+				CE759C6F171FD0E40091353C /* LoginChooseViewConViewController.h */,
+				CE759C70171FD0E50091353C /* LoginChooseViewConViewController.m */,
+				CE759C71171FD0E50091353C /* LoginChooseViewConViewController.xib */,
+				CE1F998517213B30009611A4 /* LoginController.h */,
+				CE1F998617213B30009611A4 /* LoginController.m */,
+				CE1F998717213B30009611A4 /* LoginController.xib */,
+			);
+			name = UserAction;
+			sourceTree = "<group>";
+		};
+		CE1F99661720D940009611A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CE1F996C17211D1C009611A4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CE80D9DE17262B8500A5C773 /* lame.h */,
+				CE80D9DF17262B8500A5C773 /* libmp3lame.a */,
+				CE1F997D1721231B009611A4 /* EMAsyncImageView.h */,
+				CE1F997E1721231B009611A4 /* EMAsyncImageView.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		CE5A83DC171A8569000E42E5 /* PsExport */ = {
 			isa = PBXGroup;
 			children = (
+				CE3FBA99172774E400738916 /* ui_noButton.png */,
+				CE3FBA9A172774E400738916 /* ui_yesButton.png */,
+				CE1F998217213B04009611A4 /* ui_loginFrame.png */,
+				CE759C74171FD8100091353C /* ui_buttonBackBlue.png */,
+				CE759C63171FD0CA0091353C /* ui_log_backGround.png */,
+				CE759C64171FD0CB0091353C /* ui_log_button.png */,
+				CE759C65171FD0CB0091353C /* ui_log_dida.png */,
+				CE759C66171FD0CB0091353C /* ui_log_qq.png */,
+				CE759C67171FD0CB0091353C /* ui_log_renren.png */,
+				CE759C68171FD0CB0091353C /* ui_log_sina.png */,
 				CE2E52DF171BF52F0047D185 /* ui_login.png */,
 				CE2E52E0171BF52F0047D185 /* ui_regiest.png */,
 				CE044FAA171CECB500DBC32A /* UI_RegiestBack.PNG */,
@@ -289,13 +467,39 @@
 				CE5A8415171A85EC000E42E5 /* ui_playSoundButton.png */,
 				CE5A8416171A85EC000E42E5 /* ui_sleepImg.png */,
 				CE5A8417171A85EC000E42E5 /* ui_titleBack.png */,
+				CEAB8763172A18A3003D2200 /* ui_titleButtonback.png */,
 			);
 			path = PsExport;
 			sourceTree = SOURCE_ROOT;
 		};
+		CE759C56171F8DAA0091353C /* TencentSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CE759C57171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle */,
+				CE759C58171F8DCA0091353C /* TencentOpenAPI.framework */,
+			);
+			name = TencentSDK;
+			path = PsExport;
+			sourceTree = "<group>";
+		};
+		CE80D9E217262CFC00A5C773 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				CE80D9E317262D0E00A5C773 /* SoundView.h */,
+				CE80D9E417262D0E00A5C773 /* SoundView.m */,
+				CE80D9E717262D3700A5C773 /* SoundView.xib */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
 		CECAA30E17129CF200516B8A = {
 			isa = PBXGroup;
 			children = (
+				CE80D9DC17262AFB00A5C773 /* AVFoundation.framework */,
+				CE759C61171F91CB0091353C /* libsqlite3.dylib */,
+				CE759C5F171F91B80091353C /* CoreFoundation.framework */,
+				CE759C5D171F91A30091353C /* CoreTelephony.framework */,
+				CE759C5B171F918E0091353C /* libstdc++.dylib */,
 				CE2E52E7171C44F00047D185 /* QuartzCore.framework */,
 				CECAA4481712A59900516B8A /* libz.1.1.3.dylib */,
 				CECAA4461712A4F900516B8A /* SystemConfiguration.framework */,
@@ -303,6 +507,8 @@
 				CECAA4421712A4BD00516B8A /* MobileCoreServices.framework */,
 				CECAA4401712A4B400516B8A /* CFNetwork.framework */,
 				CECAA32017129CF200516B8A /* AlarmClock */,
+				CE759C56171F8DAA0091353C /* TencentSDK */,
+				CE06B9D0171E8B0400556A00 /* sinaweibo_ios_sdk */,
 				CECAA41C1712A42C00516B8A /* ASIHTTPRequest */,
 				CECAA3541712A15C00516B8A /* JSON */,
 				CECAA33E17129CF200516B8A /* AlarmClockTests */,
@@ -334,6 +540,8 @@
 		CECAA32017129CF200516B8A /* AlarmClock */ = {
 			isa = PBXGroup;
 			children = (
+				CE1F996C17211D1C009611A4 /* Other */,
+				CE1F99661720D940009611A4 /* Models */,
 				CE044FBF171D349F00DBC32A /* Config.h */,
 				CECAA32917129CF200516B8A /* AppDelegate.h */,
 				CECAA32A17129CF200516B8A /* AppDelegate.m */,
@@ -343,20 +551,24 @@
 				CE5A8438171A8E9D000E42E5 /* ContentViewController.h */,
 				CE5A8439171A8E9D000E42E5 /* ContentViewController.m */,
 				CE5A843A171A8E9D000E42E5 /* ContentViewController.xib */,
+				CEAB8765172A1F19003D2200 /* FriendCotentViewCon.h */,
+				CEAB8766172A1F19003D2200 /* FriendCotentViewCon.m */,
 				CE5A843F171AEB8D000E42E5 /* ContentHeadCell.h */,
 				CE5A8440171AEB8D000E42E5 /* ContentHeadCell.m */,
 				CE5A8443171AEBA7000E42E5 /* ContentHeadCell.xib */,
+				CE759C76171FFD950091353C /* ContentHeadCell_logIn.h */,
+				CE759C77171FFD960091353C /* ContentHeadCell_logIn.m */,
+				CE759C78171FFD960091353C /* ContentHeadCell_logIn.xib */,
 				CE5A8446171AEC28000E42E5 /* ContentCell.h */,
 				CE5A8447171AEC28000E42E5 /* ContentCell.m */,
 				CE5A844B171AF10A000E42E5 /* ContentCell.xib */,
-				CECAA34F17129D9600516B8A /* loginViewController.h */,
-				CECAA35017129D9600516B8A /* loginViewController.m */,
-				CECAA35117129D9600516B8A /* loginViewController.xib */,
+				CE80D9E217262CFC00A5C773 /* Audio */,
+				CE06B9E7171E8BF600556A00 /* UserAction */,
 				CE76148C1713B4B900FF4E20 /* test.mp3 */,
 				CECAA44E1713199A00516B8A /* 1.png */,
-				CE044FA5171CEC3E00DBC32A /* RegiestView.h */,
-				CE044FA6171CEC3E00DBC32A /* RegiestView.m */,
-				CE044FA7171CEC3E00DBC32A /* RegiestView.xib */,
+				CE044FC8171D4E5E00DBC32A /* ErrorView.m */,
+				CE044FC7171D4E5E00DBC32A /* ErrorView.h */,
+				CE044FCA171D54CB00DBC32A /* ErrorView.xib */,
 				CECAA32117129CF200516B8A /* Supporting Files */,
 			);
 			path = AlarmClock;
@@ -372,7 +584,7 @@
 				CE044FB8171D290600DBC32A /* ui_regiestUeserNameIcon_red.png */,
 				CECAA32217129CF200516B8A /* AlarmClock-Info.plist */,
 				CECAA32317129CF200516B8A /* InfoPlist.strings */,
-				CECAA32617129CF200516B8A /* main.m */,
+				CEAB20CD1729785C0002FC41 /* main.m */,
 				CECAA32817129CF200516B8A /* AlarmClock-Prefix.pch */,
 				CECAA32C17129CF200516B8A /* Default.png */,
 				CECAA32E17129CF200516B8A /* Default@2x.png */,
@@ -382,6 +594,7 @@
 				CE5A83D6171A7861000E42E5 /* color4.png */,
 				CE044FB0171CF34F00DBC32A /* DefaultBack1.png */,
 				CE044FB2171CF35900DBC32A /* color5.png */,
+				CE044FC5171D4DBF00DBC32A /* color6.png */,
 				CE5A83D3171A75AB000E42E5 /* navigation.png */,
 				CE5A83D9171A78E9000E42E5 /* color3.png */,
 				CE5A83DC171A8569000E42E5 /* PsExport */,
@@ -411,6 +624,8 @@
 		CECAA3541712A15C00516B8A /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				CE06B94F171E3B7C00556A00 /* JSONKit.h */,
+				CE06B950171E3B7C00556A00 /* JSONKit.m */,
 				CECAA3551712A15C00516B8A /* JSON.h */,
 				CECAA3561712A15C00516B8A /* NSObject+SBJSON.h */,
 				CECAA3571712A15C00516B8A /* NSObject+SBJSON.m */,
@@ -569,6 +784,25 @@
 				CE044FBB171D290600DBC32A /* ui_regiestUeserNameIcon_gray.png in Resources */,
 				CE044FBC171D290600DBC32A /* ui_regiestUeserNameIcon_green.png in Resources */,
 				CE044FBD171D290600DBC32A /* ui_regiestUeserNameIcon_red.png in Resources */,
+				CE044FC6171D4DBF00DBC32A /* color6.png in Resources */,
+				CE044FCB171D54CC00DBC32A /* ErrorView.xib in Resources */,
+				CE06B9DF171E8B0400556A00 /* SinaWeibo.bundle in Resources */,
+				CE759C59171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				CE759C69171FD0CB0091353C /* ui_log_backGround.png in Resources */,
+				CE759C6A171FD0CB0091353C /* ui_log_button.png in Resources */,
+				CE759C6B171FD0CB0091353C /* ui_log_dida.png in Resources */,
+				CE759C6C171FD0CB0091353C /* ui_log_qq.png in Resources */,
+				CE759C6D171FD0CB0091353C /* ui_log_renren.png in Resources */,
+				CE759C6E171FD0CB0091353C /* ui_log_sina.png in Resources */,
+				CE759C73171FD0E50091353C /* LoginChooseViewConViewController.xib in Resources */,
+				CE759C75171FD8100091353C /* ui_buttonBackBlue.png in Resources */,
+				CE759C7B171FFDAF0091353C /* ContentHeadCell_logIn.xib in Resources */,
+				CE1F998317213B04009611A4 /* ui_loginFrame.png in Resources */,
+				CE1F998A17213B31009611A4 /* LoginController.xib in Resources */,
+				CE80D9E817262D3700A5C773 /* SoundView.xib in Resources */,
+				CE3FBA9B172774E400738916 /* ui_noButton.png in Resources */,
+				CE3FBA9C172774E400738916 /* ui_yesButton.png in Resources */,
+				CEAB8764172A18A3003D2200 /* ui_titleButtonback.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +832,11 @@
 				CE5A8433171A85EC000E42E5 /* ui_titleBack.png in Resources */,
 				CE5A843E171A8E9D000E42E5 /* ContentViewController.xib in Resources */,
 				CE5A8445171AEBA7000E42E5 /* ContentHeadCell.xib in Resources */,
+				CE06B9E0171E8B0400556A00 /* SinaWeibo.bundle in Resources */,
+				CE759C7A171FFD970091353C /* ContentHeadCell_logIn.xib in Resources */,
+				CE1F998417213B04009611A4 /* ui_loginFrame.png in Resources */,
+				CE1F998B17213B31009611A4 /* LoginController.xib in Resources */,
+				CE80D9E917262D3700A5C773 /* SoundView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +863,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECAA32717129CF200516B8A /* main.m in Sources */,
+				CEAB20CB1729785C0002FC41 /* main.m in Sources */,
 				CECAA32B17129CF200516B8A /* AppDelegate.m in Sources */,
 				CECAA35217129D9600516B8A /* loginViewController.m in Sources */,
 				CECAA3621712A15C00516B8A /* NSObject+SBJSON.m in Sources */,
@@ -645,6 +884,18 @@
 				CE5A843B171A8E9D000E42E5 /* ContentViewController.m in Sources */,
 				CE5A8441171AEB8D000E42E5 /* ContentHeadCell.m in Sources */,
 				CE044FA8171CEC3E00DBC32A /* RegiestView.m in Sources */,
+				CE06B954171E833C00556A00 /* JSONKit.m in Sources */,
+				CE044FC9171D4E5E00DBC32A /* ErrorView.m in Sources */,
+				CE06B9E1171E8B0400556A00 /* SinaWeibo.m in Sources */,
+				CE06B9E3171E8B0400556A00 /* SinaWeiboAuthorizeView.m in Sources */,
+				CE06B9E5171E8B0400556A00 /* SinaWeiboRequest.m in Sources */,
+				CE1F996B1720EB60009611A4 /* ContentHeadCell_logIn.m in Sources */,
+				CE1F998117212591009611A4 /* ContentCell.m in Sources */,
+				CE759C72171FD0E50091353C /* LoginChooseViewConViewController.m in Sources */,
+				CE1F997F1721231B009611A4 /* EMAsyncImageView.m in Sources */,
+				CE1F998817213B31009611A4 /* LoginController.m in Sources */,
+				CE80D9E517262D0E00A5C773 /* SoundView.m in Sources */,
+				CEAB8767172A1F19003D2200 /* FriendCotentViewCon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +907,13 @@
 				CE5A83CA171A5D4E000E42E5 /* RootViewController.m in Sources */,
 				CE5A843C171A8E9D000E42E5 /* ContentViewController.m in Sources */,
 				CE5A8442171AEB8D000E42E5 /* ContentHeadCell.m in Sources */,
-				CE5A8449171AEC28000E42E5 /* ContentCell.m in Sources */,
+				CE06B951171E3B7C00556A00 /* JSONKit.m in Sources */,
+				CE06B9E2171E8B0400556A00 /* SinaWeibo.m in Sources */,
+				CE06B9E4171E8B0400556A00 /* SinaWeiboAuthorizeView.m in Sources */,
+				CE06B9E6171E8B0400556A00 /* SinaWeiboRequest.m in Sources */,
+				CE759C79171FFD970091353C /* ContentHeadCell_logIn.m in Sources */,
+				CE1F998917213B31009611A4 /* LoginController.m in Sources */,
+				CE80D9E617262D0E00A5C773 /* SoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +928,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CEAB20CD1729785C0002FC41 /* main.m */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEAB20CC1729785C0002FC41 /* en */,
+			);
+			name = main.m;
+			sourceTree = "<group>";
+		};
 		CECAA32317129CF200516B8A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -717,6 +982,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -742,6 +1011,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -751,9 +1024,17 @@
 		CECAA34A17129CF200516B8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PsExport\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClock/AlarmClock-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AlarmClock\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -763,9 +1044,17 @@
 		CECAA34B17129CF200516B8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/PsExport\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClock/AlarmClock-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AlarmClock\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -783,6 +1072,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClockTests/AlarmClockTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AlarmClock\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -800,6 +1093,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AlarmClock/AlarmClock-Prefix.pch";
 				INFOPLIST_FILE = "AlarmClockTests/AlarmClockTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AlarmClock\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

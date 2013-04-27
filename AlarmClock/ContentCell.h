@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "EMAsyncImageView.h"
 @interface ContentCell : UITableViewCell
-
+@property (nonatomic, retain) IBOutlet EMAsyncImageView 	*picView;
+@property (nonatomic, retain) IBOutlet UILabel 	*Text;
+@property (nonatomic, retain) IBOutlet UIButton 	*PlaySoundButton;
+@property (nonatomic, retain) NSString *pString;
 @end

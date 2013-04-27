@@ -7,12 +7,44 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-@interface RootViewController : UIViewController
-
+#import "SinaWeibo.h"
+#import "SinaWeiboRequest.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <AVFoundation/AVFoundation.h>
+@class ContentViewController;
+@class FriendCotentViewCon;
+@interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate>
 {
-
+    NSDictionary *userInfo;
+    NSArray *statuses;
+    NSString *postStatusText;
+    NSString *postImageStatusText;
+    TencentOAuth* _tencentOAuth;
+   	NSMutableArray* _permissions;
+    NSDictionary *tencentOAuthUserInfo;
+    ContentViewController *pPublicContentViewController;
+    FriendCotentViewCon *pFriendContentViewController;
+    
+    
+    AVAudioSession *session;
+    
+    NSURL *recordedFile;
+    AVAudioPlayer *player;
+    AVAudioRecorder *recorder;
 }
+@property (readonly, nonatomic) NSDictionary *userInfo;
+@property (readonly, nonatomic) NSDictionary *tencentOAuthUserInfo;
 
+@property (nonatomic , retain) AVAudioPlayer *player;
+@property (nonatomic , retain) NSURL *recordedFile;
+@property (nonatomic , retain) IBOutlet UIButton *recorderButton;
+@property (nonatomic , retain) IBOutlet UILabel *Text,*titleText1,*titleText2,*titleText3;
+@property (nonatomic , retain) IBOutlet UIButton *YESButton,*NOButton;
+@property (nonatomic , retain) IBOutlet UIImageView *titleBack;
+- (SinaWeibo *)sinaweibo;
+- (TencentOAuth *)tencentweibo;
+- (void)TencentLogin;
+-(void)RefrshDataWithUserInfoType :(NSString*) userType;
++(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status;
++ (NSDictionary *)getUserData;
 @end

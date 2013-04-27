@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ContentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+#import "ASINetworkQueue.h"
+#import <AVFoundation/AVFoundation.h>
+@interface ContentViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,AVAudioPlayerDelegate,AVAudioSessionDelegate>
 {
-    
+    NSMutableArray *pContentArr;
+    NSMutableArray *pSoundContentArr;
+    ASINetworkQueue *queue;
+    AVAudioPlayer *player;
 }
 @property (nonatomic, retain) UITableView *tableView;
+-(void)RefrshDataWithUserInfoType :(NSString*) userType;
 @end

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "loginViewController.h"
 #import "RegiestView.h"
+#import "LoginChooseViewConViewController.h"    
 @implementation ContentHeadCell
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -38,7 +39,7 @@
 -(IBAction)PushLoginView:(id)sender
 {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    loginViewController *pLogInview = [[loginViewController alloc] initWithNibName:@"loginViewController" bundle:nil];
+    LoginChooseViewConViewController *pLogInview = [[LoginChooseViewConViewController alloc] initWithNibName:@"LoginChooseViewConViewController" bundle:nil];
     [appDelegate.pRootViewCon.navigationController pushViewController:pLogInview animated:YES];
     [pLogInview release];
 }
