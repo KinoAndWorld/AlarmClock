@@ -194,7 +194,7 @@
     [RootViewController SetUserInfoData:UserName.text name:NikeName.text faceImg:[NSString stringWithFormat:@"%@/userPic/%@.png",IMAGE_URL,UserName.text] typeString:@"FREE" status:logInTag];
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
      [delegate.pRootViewCon RefrshDataWithUserInfoType:nil];
-    
+    [RootViewController   ReloadAllData];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 #pragma NETWORK
@@ -274,6 +274,11 @@
             [pErrorView PlayAnimation:[pContent objectForKey:@"info"]];
         }
         else{
+            if ([[pContent objectForKey:@"userInfo"] isKindOfClass:[NSDictionary class]]) {
+                [[NSUserDefaults standardUserDefaults] setObject:[[pContent objectForKey:@"userInfo"] objectForKey:@"ID"] forKey:@"userID"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+            }
             [self regiestDone];
         }
     }

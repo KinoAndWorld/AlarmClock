@@ -13,4 +13,5 @@
 @property (nonatomic, retain) IBOutlet UILabel 	*Text;
 @property (nonatomic, retain) IBOutlet UIButton 	*PlaySoundButton;
 @property (nonatomic, retain) NSString *pString;
+@property (nonatomic, retain) NSString *ID;
 @end

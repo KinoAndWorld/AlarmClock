@@ -10,11 +10,15 @@
 #import "Config.h"
 @implementation FriendCotentViewCon
 -(void) refreshView{
+    NSString *pString = [[NSUserDefaults   standardUserDefaults] objectForKey:@"userID"];
+    if (!pString) {
+        pString = @"XXXY";
+    }
     ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:S_URL]];
     [request setDelegate:self];
-    [request setUsername:@"getFriendList"];
-    [request setPostValue:@"getFriendList" forKey:@"action"];
-    [request setPostValue:@"nil" forKey:@"name"];
+    [request setUsername:@"getList"];
+    [request setPostValue:@"getList" forKey:@"action"];
+    [request setPostValue:pString forKey:@"id"];
     [request setPostValue:@"0" forKey:@"row"];
     [request startAsynchronous];
 }

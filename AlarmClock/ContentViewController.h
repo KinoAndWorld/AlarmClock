@@ -18,4 +18,5 @@
 }
 @property (nonatomic, retain) UITableView *tableView;
 -(void)RefrshDataWithUserInfoType :(NSString*) userType;
+-(void) refreshView;
 @end

@@ -12,6 +12,8 @@
 #include "RootViewController.h"
 #include "LoginController.h"
 #import "Config.h"
+#import "ContentViewController.h"
+#import "FriendCotentViewCon.h"
 @interface LoginChooseViewConViewController ()
 
 @end
@@ -111,8 +113,14 @@
     NSString *pString = [NSString stringWithString:[request responseString]];
     NSLog(@"Response finish:%@",pString);
     pString = [AppDelegate getClearContext:pString];
-   // NSDictionary *pContent = [pString objectFromJSONStringWithParseOptions:JKParseOptionLooseUnicode];
-    
+   NSDictionary *pContent = [pString objectFromJSONStringWithParseOptions:JKParseOptionLooseUnicode];
+    if ([[pContent objectForKey:@"userInfo"] isKindOfClass:[NSDictionary class]]) {
+        [[NSUserDefaults standardUserDefaults] setObject:[[pContent objectForKey:@"userInfo"] objectForKey:@"ID"] forKey:@"userID"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [RootViewController   ReloadAllData];
+    }
+
     
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [self.navigationController popViewControllerAnimated:YES];

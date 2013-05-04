@@ -7,10 +7,11 @@
 //
 
 #import "ContentCell.h"
-
+#import "ASIFormDataRequest.h"
+#import "Config.h"
 @implementation ContentCell
 
-@synthesize picView,Text,PlaySoundButton,pString;
+@synthesize picView,Text,PlaySoundButton,pString,ID;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -28,6 +29,34 @@
 }
 -(IBAction)PlaySound:(id)sender
 {
+    
+}
+-(IBAction)AddFriend:(id)sender
+{
+    if ([[NSUserDefaults   standardUserDefaults] objectForKey:@"userID"] == nil) {
+        NSLog(@"未登陆！");
+        return;
+    }
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL: [NSURL URLWithString:S_URL]];
+    [request setDelegate:self];
+    [request setUsername:@"AddFriend"];
+    [request setPostValue:@"AddFriend" forKey:@"action"];
+    [request setPostValue:[[NSUserDefaults   standardUserDefaults] objectForKey:@"userID"] forKey:@"userName"];
+    [request setPostValue:ID forKey:@"friendName"];
+    NSLog(@"userid:%@  to  id: %@",[[NSUserDefaults   standardUserDefaults] objectForKey:@"userID"],ID);
+    [request startAsynchronous];
+}
+#pragma mark - NETWORK Delegate
+- (void) requestFinished:(ASIHTTPRequest *)request {
+    
+        //@todo
+        NSString *pString = [NSString stringWithString:[request responseString]];
+        NSLog(@"Response finish:%@",pString);
+
+}
+- (void) requestFailed:(ASIHTTPRequest *)request {
+    //NSString *responseString = [request responseString];
+    NSLog(@"Response Fail %d : %@", request.responseStatusCode, [request responseString]);
     
 }
 @end

@@ -9,5 +9,5 @@
 #import "ContentViewController.h"
 #import "ASINetworkQueue.h"
 @interface FriendCotentViewCon : ContentViewController
-
+-(void) refreshView;
 @end

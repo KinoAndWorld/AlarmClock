@@ -71,7 +71,6 @@
     [request setDelegate:self];
     [request setUsername:@"getList"];
     [request setPostValue:@"getList" forKey:@"action"];
-    [request setPostValue:@"nil" forKey:@"name"];
     [request setPostValue:@"0" forKey:@"row"];
     [request startAsynchronous];
 }
@@ -100,6 +99,7 @@
         NSLog(@"Response finish:%@",pString);
         pString = [AppDelegate getClearContext:pString];
         NSDictionary *pContent = [pString objectFromJSONStringWithParseOptions:JKParseOptionLooseUnicode];
+        [pContentArr removeAllObjects];
         [pContentArr addObjectsFromArray:[pContent objectForKey:@"list"]];
         [self getUserAudio:[pContent objectForKey:@"list"]];
     }
@@ -189,6 +189,7 @@
         if ([pSoundContentArr containsObject:[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"name"]]) {
             ((ContentCell*)cell).PlaySoundButton.hidden = NO;
         }
+        ((ContentCell*)cell).ID = [[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"ID"];
         
     }
     return cell;

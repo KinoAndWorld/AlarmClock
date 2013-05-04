@@ -32,6 +32,13 @@
 		CE06B9E4171E8B0400556A00 /* SinaWeiboAuthorizeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9D9171E8B0400556A00 /* SinaWeiboAuthorizeView.m */; };
 		CE06B9E5171E8B0400556A00 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */; };
 		CE06B9E6171E8B0400556A00 /* SinaWeiboRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */; };
+		CE09B76C17320A5000221012 /* AlarmClockViewCon.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09B76A17320A5000221012 /* AlarmClockViewCon.m */; };
+		CE09B76D17320A5000221012 /* AlarmClockViewCon.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE09B76B17320A5000221012 /* AlarmClockViewCon.xib */; };
+		CE09B77017320AA400221012 /* AlarmClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09B76F17320AA400221012 /* AlarmClockCell.m */; };
+		CE09B77217320AB400221012 /* AlarmClockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE09B77117320AB400221012 /* AlarmClockCell.xib */; };
+		CE1E045D1733703000275052 /* narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E045C1733703000275052 /* narrow.png */; };
+		CE1E0466173391AD00275052 /* AddClockCon.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1E0464173391AD00275052 /* AddClockCon.m */; };
+		CE1E0467173391AD00275052 /* AddClockCon.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1E0465173391AD00275052 /* AddClockCon.xib */; };
 		CE1F996B1720EB60009611A4 /* ContentHeadCell_logIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CE759C77171FFD960091353C /* ContentHeadCell_logIn.m */; };
 		CE1F997F1721231B009611A4 /* EMAsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F997E1721231B009611A4 /* EMAsyncImageView.m */; };
 		CE1F998117212591009611A4 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A8447171AEC28000E42E5 /* ContentCell.m */; };
@@ -202,6 +209,16 @@
 		CE06B9DA171E8B0400556A00 /* SinaWeiboConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboConstants.h; sourceTree = "<group>"; };
 		CE06B9DB171E8B0400556A00 /* SinaWeiboRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaWeiboRequest.h; sourceTree = "<group>"; };
 		CE06B9DC171E8B0400556A00 /* SinaWeiboRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaWeiboRequest.m; sourceTree = "<group>"; };
+		CE09B76917320A5000221012 /* AlarmClockViewCon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmClockViewCon.h; sourceTree = SOURCE_ROOT; };
+		CE09B76A17320A5000221012 /* AlarmClockViewCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmClockViewCon.m; sourceTree = SOURCE_ROOT; };
+		CE09B76B17320A5000221012 /* AlarmClockViewCon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmClockViewCon.xib; sourceTree = SOURCE_ROOT; };
+		CE09B76E17320AA400221012 /* AlarmClockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmClockCell.h; sourceTree = "<group>"; };
+		CE09B76F17320AA400221012 /* AlarmClockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmClockCell.m; sourceTree = "<group>"; };
+		CE09B77117320AB400221012 /* AlarmClockCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmClockCell.xib; sourceTree = "<group>"; };
+		CE1E045C1733703000275052 /* narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = narrow.png; sourceTree = "<group>"; };
+		CE1E0463173391AD00275052 /* AddClockCon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockCon.h; sourceTree = "<group>"; };
+		CE1E0464173391AD00275052 /* AddClockCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockCon.m; sourceTree = "<group>"; };
+		CE1E0465173391AD00275052 /* AddClockCon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddClockCon.xib; sourceTree = "<group>"; };
 		CE1F997D1721231B009611A4 /* EMAsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAsyncImageView.h; sourceTree = "<group>"; };
 		CE1F997E1721231B009611A4 /* EMAsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAsyncImageView.m; sourceTree = "<group>"; };
 		CE1F998217213B04009611A4 /* ui_loginFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_loginFrame.png; sourceTree = "<group>"; };
@@ -416,11 +433,20 @@
 			name = UserAction;
 			sourceTree = "<group>";
 		};
-		CE1F99661720D940009611A4 /* Models */ = {
+		CE1F99661720D940009611A4 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				CE09B76917320A5000221012 /* AlarmClockViewCon.h */,
+				CE09B76A17320A5000221012 /* AlarmClockViewCon.m */,
+				CE09B76B17320A5000221012 /* AlarmClockViewCon.xib */,
+				CE09B76E17320AA400221012 /* AlarmClockCell.h */,
+				CE09B76F17320AA400221012 /* AlarmClockCell.m */,
+				CE09B77117320AB400221012 /* AlarmClockCell.xib */,
+				CE1E0463173391AD00275052 /* AddClockCon.h */,
+				CE1E0464173391AD00275052 /* AddClockCon.m */,
+				CE1E0465173391AD00275052 /* AddClockCon.xib */,
 			);
-			name = Models;
+			name = Clock;
 			sourceTree = "<group>";
 		};
 		CE1F996C17211D1C009611A4 /* Other */ = {
@@ -437,6 +463,7 @@
 		CE5A83DC171A8569000E42E5 /* PsExport */ = {
 			isa = PBXGroup;
 			children = (
+				CE1E045C1733703000275052 /* narrow.png */,
 				CE3FBA99172774E400738916 /* ui_noButton.png */,
 				CE3FBA9A172774E400738916 /* ui_yesButton.png */,
 				CE1F998217213B04009611A4 /* ui_loginFrame.png */,
@@ -541,7 +568,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1F996C17211D1C009611A4 /* Other */,
-				CE1F99661720D940009611A4 /* Models */,
+				CE1F99661720D940009611A4 /* Clock */,
 				CE044FBF171D349F00DBC32A /* Config.h */,
 				CECAA32917129CF200516B8A /* AppDelegate.h */,
 				CECAA32A17129CF200516B8A /* AppDelegate.m */,
@@ -803,6 +830,10 @@
 				CE3FBA9B172774E400738916 /* ui_noButton.png in Resources */,
 				CE3FBA9C172774E400738916 /* ui_yesButton.png in Resources */,
 				CEAB8764172A18A3003D2200 /* ui_titleButtonback.png in Resources */,
+				CE09B76D17320A5000221012 /* AlarmClockViewCon.xib in Resources */,
+				CE09B77217320AB400221012 /* AlarmClockCell.xib in Resources */,
+				CE1E045D1733703000275052 /* narrow.png in Resources */,
+				CE1E0467173391AD00275052 /* AddClockCon.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +927,9 @@
 				CE1F998817213B31009611A4 /* LoginController.m in Sources */,
 				CE80D9E517262D0E00A5C773 /* SoundView.m in Sources */,
 				CEAB8767172A1F19003D2200 /* FriendCotentViewCon.m in Sources */,
+				CE09B76C17320A5000221012 /* AlarmClockViewCon.m in Sources */,
+				CE09B77017320AA400221012 /* AlarmClockCell.m in Sources */,
+				CE1E0466173391AD00275052 /* AddClockCon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -967,6 +1001,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xin wu (RBX6Z5J5VS)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -986,6 +1021,8 @@
 					"-fobjc-arc",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1003,7 +1040,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: xin wu (RBX6Z5J5VS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin wu (RBX6Z5J5VS)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1015,6 +1053,8 @@
 					"-fobjc-arc",
 					"-all_load",
 				);
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1024,6 +1064,8 @@
 		CECAA34A17129CF200516B8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling yang (T6DCT4BL7D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ling yang (T6DCT4BL7D)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PsExport\"",
@@ -1036,6 +1078,8 @@
 					"\"$(SRCROOT)/AlarmClock\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1044,6 +1088,8 @@
 		CECAA34B17129CF200516B8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling yang (T6DCT4BL7D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ling yang (T6DCT4BL7D)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PsExport\"",
@@ -1056,6 +1102,8 @@
 					"\"$(SRCROOT)/AlarmClock\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

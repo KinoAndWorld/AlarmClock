@@ -14,17 +14,26 @@
 #include "EMAsyncImageView.h"
 #import "SoundView.h"
 #import "lame.h"
+#import "AlarmClockViewCon.h"
 @implementation RootViewController
 
-@synthesize userInfo,tencentOAuthUserInfo;
+@synthesize userInfo,tencentOAuthUserInfo,pPublicContentViewController,pFriendContentViewController;
 
 @synthesize player,Text,titleText1,titleText2,titleText3,titleBack;
 @synthesize recordedFile,recorderButton,YESButton,NOButton;
+-(IBAction)PushAlarmClock:(id)sender
+{
+    AlarmClockViewCon *pAlarmClockViewCon = [[AlarmClockViewCon alloc] initWithNibName:@"AlarmClockViewCon" bundle:nil];
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:pAlarmClockViewCon] animated:YES completion:nil];
+}
 -(IBAction)LogOUt:(id)sender
 {
     [_tencentOAuth logout:self];
     [((RootViewController*)[UIApplication sharedApplication].delegate).sinaweibo logOut];
+    [self removeUserData];
     [pPublicContentViewController.tableView reloadData];
+    [pFriendContentViewController.tableView reloadData];
+    [pFriendContentViewController refreshView];
 }
 -(IBAction)ChickPublic:(id)sender
 {
@@ -56,6 +65,13 @@
     titleBack.frame = CGRectMake( 200,  titleBack.frame.origin.y, titleBack.frame.size.width ,  titleBack.frame.size.height);
 	[UIView commitAnimations];
 }
++(void)ReloadAllData
+{
+    [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pPublicContentViewController.tableView reloadData];
+    [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pFriendContentViewController.tableView reloadData];
+    [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pFriendContentViewController refreshView];
+}
+
 +(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status
 {
     NSDictionary *authData = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -66,6 +82,7 @@
                               status , @"status", nil];
     [[NSUserDefaults standardUserDefaults] setObject:authData forKey:UserInfoData];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 + (NSDictionary *)getUserData
 {
@@ -75,6 +92,7 @@
 - (void)removeUserData
 {
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:UserInfoData];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userID"];
     [EMAsyncImageView RemoveAllImage];
 }
 -(void)RefrshDataWithUserInfoType :(NSString*) userType
@@ -97,6 +115,8 @@
     [self.view sendSubviewToBack:pFriendContentViewController.view];
     [pFriendContentViewController.view setFrame:CGRectMake(0, 44, pFriendContentViewController.view.frame.size.width, pFriendContentViewController.view.frame.size.height)];
     
+    
+
     
     NSString *appid = @"222222";
     _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appid
@@ -223,7 +243,7 @@
 {
     NSLog(@"sinaweiboDidLogOut");
     [self removeAuthData];
-    [self removeUserData];
+    
 }
 
 - (void)sinaweiboLogInDidCancel:(SinaWeibo *)sinaweibo
@@ -577,7 +597,7 @@
 }
 -(void)CancleUploadAudio:(id)sender
 {
-    Text.text = @"按下录音";
+    Text.text = @" ";
     YESButton.hidden = YES;
     NOButton.hidden = YES;
     recorderButton.hidden = NO;

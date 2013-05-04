@@ -67,13 +67,21 @@
             [pErrorView PlayAnimation: [NSString stringWithFormat:@"%@",[pContent objectForKey:@"info"]]];
         }
         else{
-            [RootViewController SetUserInfoData:UserName.text name:[pContent objectForKey:@"nikeName"] faceImg:[NSString stringWithFormat:@"%@/userPic/%@.png",IMAGE_URL,UserName.text] typeString:@"FREE" status:logInTag];
-            AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-            [delegate.pRootViewCon RefrshDataWithUserInfoType:nil];
-            
-            [self.navigationController popToRootViewControllerAnimated:YES];
-        
+           
+            if ([[pContent objectForKey:@"userInfo"] isKindOfClass:[NSDictionary class]]) {
+                [[NSUserDefaults standardUserDefaults] setObject:[[pContent objectForKey:@"userInfo"] objectForKey:@"ID"] forKey:@"userID"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                 [RootViewController SetUserInfoData:UserName.text name:[[pContent objectForKey:@"userInfo"] objectForKey:@"nikeName"] faceImg:[NSString stringWithFormat:@"%@/userPic/%@.png",IMAGE_URL,UserName.text] typeString:@"FREE" status:logInTag];
+            }
+            [RootViewController   ReloadAllData];
+
         }
+        
+        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        [delegate.pRootViewCon RefrshDataWithUserInfoType:nil];
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 
 }

@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 @class ContentViewController;
 @class FriendCotentViewCon;
+@class AlarmClockViewCon;
 @interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate>
 {
     NSDictionary *userInfo;
@@ -25,7 +26,6 @@
     ContentViewController *pPublicContentViewController;
     FriendCotentViewCon *pFriendContentViewController;
     
-    
     AVAudioSession *session;
     
     NSURL *recordedFile;
@@ -33,6 +33,8 @@
     AVAudioRecorder *recorder;
 }
 @property (readonly, nonatomic) NSDictionary *userInfo;
+@property (readonly, nonatomic) ContentViewController *pPublicContentViewController;
+@property (readonly, nonatomic) FriendCotentViewCon *pFriendContentViewController;
 @property (readonly, nonatomic) NSDictionary *tencentOAuthUserInfo;
 
 @property (nonatomic , retain) AVAudioPlayer *player;
@@ -47,4 +49,5 @@
 -(void)RefrshDataWithUserInfoType :(NSString*) userType;
 +(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status;
 + (NSDictionary *)getUserData;
++(void)ReloadAllData;
 @end
