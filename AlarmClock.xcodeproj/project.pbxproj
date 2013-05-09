@@ -53,6 +53,9 @@
 		CE2E52E8171C44F00047D185 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2E52E7171C44F00047D185 /* QuartzCore.framework */; };
 		CE3FBA9B172774E400738916 /* ui_noButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA99172774E400738916 /* ui_noButton.png */; };
 		CE3FBA9C172774E400738916 /* ui_yesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA9A172774E400738916 /* ui_yesButton.png */; };
+		CE4DAE58173B483400A5E693 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4DAE57173B483400A5E693 /* CoreAudio.framework */; };
+		CE4DAE5A173B4B5000A5E693 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4DAE59173B4B5000A5E693 /* MediaPlayer.framework */; };
+		CE4DAE5C173B7FBE00A5E693 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4DAE5B173B7FBE00A5E693 /* AudioToolbox.framework */; };
 		CE5A83CA171A5D4E000E42E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A83C9171A5D4E000E42E5 /* RootViewController.m */; };
 		CE5A83CB171A5D86000E42E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A83C9171A5D4E000E42E5 /* RootViewController.m */; };
 		CE5A83D1171A70D3000E42E5 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A83D0171A70D3000E42E5 /* RootViewController.xib */; };
@@ -104,6 +107,14 @@
 		CE5A844C171AF10A000E42E5 /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844B171AF10A000E42E5 /* ContentCell.xib */; };
 		CE5A844F171AF357000E42E5 /* color1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844D171AF357000E42E5 /* color1.png */; };
 		CE5A8450171AF357000E42E5 /* color2.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A844E171AF357000E42E5 /* color2.png */; };
+		CE6C70F41736576200636610 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6C70F31736576200636610 /* icon_114.png */; };
+		CE6C70F81736A3D200636610 /* RepeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C70F61736A3D200636610 /* RepeatViewController.m */; };
+		CE6C70F91736A3D200636610 /* RepeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C70F71736A3D200636610 /* RepeatViewController.xib */; };
+		CE6C71181736A94100636610 /* CPPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C71041736A94100636610 /* CPPickerView.m */; };
+		CE6C71191736A94100636610 /* CPPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C71061736A94100636610 /* CPPickerViewCell.m */; };
+		CE6C711C1736A94100636610 /* horizontalPickerShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6C710B1736A94100636610 /* horizontalPickerShadow@2x.png */; };
+		CE6C711F1736A94100636610 /* shadowOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6C710F1736A94100636610 /* shadowOverlay@2x.png */; };
+		CE6C71201736A94100636610 /* stretchableGlass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6C71101736A94100636610 /* stretchableGlass@2x.png */; };
 		CE759C59171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE759C57171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle */; };
 		CE759C5A171F8DCA0091353C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C58171F8DCA0091353C /* TencentOpenAPI.framework */; };
 		CE759C5C171F918E0091353C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE759C5B171F918E0091353C /* libstdc++.dylib */; };
@@ -168,6 +179,11 @@
 		CECAA4471712A4F900516B8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4461712A4F900516B8A /* SystemConfiguration.framework */; };
 		CECAA4491712A59900516B8A /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4481712A59900516B8A /* libz.1.1.3.dylib */; };
 		CECAA44F1713199A00516B8A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CECAA44E1713199A00516B8A /* 1.png */; };
+		CEFBD48C1738F26F007C04E4 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFBD48B1738F26F007C04E4 /* ClockManager.m */; };
+		CEFBD48E17390468007C04E4 /* OpenDoor.caf in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD48D17390468007C04E4 /* OpenDoor.caf */; };
+		CEFBD48F17390468007C04E4 /* OpenDoor.caf in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD48D17390468007C04E4 /* OpenDoor.caf */; };
+		CEFBD49117390538007C04E4 /* logo-1024-1副本.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD49017390538007C04E4 /* logo-1024-1副本.png */; };
+		CEFBD49217390538007C04E4 /* logo-1024-1副本.png in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD49017390538007C04E4 /* logo-1024-1副本.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +246,9 @@
 		CE2E52E7171C44F00047D185 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CE3FBA99172774E400738916 /* ui_noButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_noButton.png; path = PsExport/ui_noButton.png; sourceTree = SOURCE_ROOT; };
 		CE3FBA9A172774E400738916 /* ui_yesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_yesButton.png; path = PsExport/ui_yesButton.png; sourceTree = SOURCE_ROOT; };
+		CE4DAE57173B483400A5E693 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		CE4DAE59173B4B5000A5E693 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CE4DAE5B173B7FBE00A5E693 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CE5A83C8171A5D4E000E42E5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		CE5A83C9171A5D4E000E42E5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		CE5A83D0171A70D3000E42E5 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
@@ -262,6 +281,17 @@
 		CE5A844B171AF10A000E42E5 /* ContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
 		CE5A844D171AF357000E42E5 /* color1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color1.png; sourceTree = "<group>"; };
 		CE5A844E171AF357000E42E5 /* color2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color2.png; sourceTree = "<group>"; };
+		CE6C70F31736576200636610 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
+		CE6C70F51736A3D200636610 /* RepeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepeatViewController.h; sourceTree = "<group>"; };
+		CE6C70F61736A3D200636610 /* RepeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepeatViewController.m; sourceTree = "<group>"; };
+		CE6C70F71736A3D200636610 /* RepeatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepeatViewController.xib; sourceTree = "<group>"; };
+		CE6C71031736A94100636610 /* CPPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPickerView.h; sourceTree = "<group>"; };
+		CE6C71041736A94100636610 /* CPPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPickerView.m; sourceTree = "<group>"; };
+		CE6C71051736A94100636610 /* CPPickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPickerViewCell.h; sourceTree = "<group>"; };
+		CE6C71061736A94100636610 /* CPPickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPPickerViewCell.m; sourceTree = "<group>"; };
+		CE6C710B1736A94100636610 /* horizontalPickerShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontalPickerShadow@2x.png"; sourceTree = "<group>"; };
+		CE6C710F1736A94100636610 /* shadowOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shadowOverlay@2x.png"; sourceTree = "<group>"; };
+		CE6C71101736A94100636610 /* stretchableGlass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stretchableGlass@2x.png"; sourceTree = "<group>"; };
 		CE759C57171F8DCA0091353C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		CE759C58171F8DCA0091353C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		CE759C5B171F918E0091353C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -351,6 +381,10 @@
 		CECAA4461712A4F900516B8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CECAA4481712A59900516B8A /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		CECAA44E1713199A00516B8A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CEFBD48A1738F26F007C04E4 /* ClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockManager.h; sourceTree = "<group>"; };
+		CEFBD48B1738F26F007C04E4 /* ClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockManager.m; sourceTree = "<group>"; };
+		CEFBD48D17390468007C04E4 /* OpenDoor.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenDoor.caf; sourceTree = "<group>"; };
+		CEFBD49017390538007C04E4 /* logo-1024-1副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-1024-1副本.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +392,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4DAE5C173B7FBE00A5E693 /* AudioToolbox.framework in Frameworks */,
+				CE4DAE5A173B4B5000A5E693 /* MediaPlayer.framework in Frameworks */,
+				CE4DAE58173B483400A5E693 /* CoreAudio.framework in Frameworks */,
 				CE80D9DD17262AFB00A5C773 /* AVFoundation.framework in Frameworks */,
 				CE759C62171F91CB0091353C /* libsqlite3.dylib in Frameworks */,
 				CE759C60171F91B80091353C /* CoreFoundation.framework in Frameworks */,
@@ -436,6 +473,7 @@
 		CE1F99661720D940009611A4 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C70FF1736A94100636610 /* PickerView */,
 				CE09B76917320A5000221012 /* AlarmClockViewCon.h */,
 				CE09B76A17320A5000221012 /* AlarmClockViewCon.m */,
 				CE09B76B17320A5000221012 /* AlarmClockViewCon.xib */,
@@ -445,6 +483,11 @@
 				CE1E0463173391AD00275052 /* AddClockCon.h */,
 				CE1E0464173391AD00275052 /* AddClockCon.m */,
 				CE1E0465173391AD00275052 /* AddClockCon.xib */,
+				CE6C70F51736A3D200636610 /* RepeatViewController.h */,
+				CE6C70F61736A3D200636610 /* RepeatViewController.m */,
+				CE6C70F71736A3D200636610 /* RepeatViewController.xib */,
+				CEFBD48A1738F26F007C04E4 /* ClockManager.h */,
+				CEFBD48B1738F26F007C04E4 /* ClockManager.m */,
 			);
 			name = Clock;
 			sourceTree = "<group>";
@@ -494,10 +537,33 @@
 				CE5A8415171A85EC000E42E5 /* ui_playSoundButton.png */,
 				CE5A8416171A85EC000E42E5 /* ui_sleepImg.png */,
 				CE5A8417171A85EC000E42E5 /* ui_titleBack.png */,
+				CEFBD49017390538007C04E4 /* logo-1024-1副本.png */,
 				CEAB8763172A18A3003D2200 /* ui_titleButtonback.png */,
 			);
 			path = PsExport;
 			sourceTree = SOURCE_ROOT;
+		};
+		CE6C70FF1736A94100636610 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C71021736A94100636610 /* CPPickerView */,
+				CE6C710B1736A94100636610 /* horizontalPickerShadow@2x.png */,
+				CE6C710F1736A94100636610 /* shadowOverlay@2x.png */,
+				CE6C71101736A94100636610 /* stretchableGlass@2x.png */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		CE6C71021736A94100636610 /* CPPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CE6C71031736A94100636610 /* CPPickerView.h */,
+				CE6C71041736A94100636610 /* CPPickerView.m */,
+				CE6C71051736A94100636610 /* CPPickerViewCell.h */,
+				CE6C71061736A94100636610 /* CPPickerViewCell.m */,
+			);
+			path = CPPickerView;
+			sourceTree = "<group>";
 		};
 		CE759C56171F8DAA0091353C /* TencentSDK */ = {
 			isa = PBXGroup;
@@ -522,6 +588,10 @@
 		CECAA30E17129CF200516B8A = {
 			isa = PBXGroup;
 			children = (
+				CE4DAE5B173B7FBE00A5E693 /* AudioToolbox.framework */,
+				CE4DAE59173B4B5000A5E693 /* MediaPlayer.framework */,
+				CE4DAE57173B483400A5E693 /* CoreAudio.framework */,
+				CE6C70F31736576200636610 /* icon_114.png */,
 				CE80D9DC17262AFB00A5C773 /* AVFoundation.framework */,
 				CE759C61171F91CB0091353C /* libsqlite3.dylib */,
 				CE759C5F171F91B80091353C /* CoreFoundation.framework */,
@@ -604,6 +674,7 @@
 		CECAA32117129CF200516B8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEFBD48D17390468007C04E4 /* OpenDoor.caf */,
 				CE044FB4171D290600DBC32A /* ui_regiestPassWordIcon_gray.png */,
 				CE044FB5171D290600DBC32A /* ui_regiestPassWordIcon_red.png */,
 				CE044FB6171D290600DBC32A /* ui_regiestUeserNameIcon_gray.png */,
@@ -834,6 +905,13 @@
 				CE09B77217320AB400221012 /* AlarmClockCell.xib in Resources */,
 				CE1E045D1733703000275052 /* narrow.png in Resources */,
 				CE1E0467173391AD00275052 /* AddClockCon.xib in Resources */,
+				CE6C70F41736576200636610 /* icon_114.png in Resources */,
+				CE6C70F91736A3D200636610 /* RepeatViewController.xib in Resources */,
+				CE6C711C1736A94100636610 /* horizontalPickerShadow@2x.png in Resources */,
+				CE6C711F1736A94100636610 /* shadowOverlay@2x.png in Resources */,
+				CE6C71201736A94100636610 /* stretchableGlass@2x.png in Resources */,
+				CEFBD48E17390468007C04E4 /* OpenDoor.caf in Resources */,
+				CEFBD49117390538007C04E4 /* logo-1024-1副本.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,6 +946,8 @@
 				CE1F998417213B04009611A4 /* ui_loginFrame.png in Resources */,
 				CE1F998B17213B31009611A4 /* LoginController.xib in Resources */,
 				CE80D9E917262D3700A5C773 /* SoundView.xib in Resources */,
+				CEFBD48F17390468007C04E4 /* OpenDoor.caf in Resources */,
+				CEFBD49217390538007C04E4 /* logo-1024-1副本.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,6 +1010,10 @@
 				CE09B76C17320A5000221012 /* AlarmClockViewCon.m in Sources */,
 				CE09B77017320AA400221012 /* AlarmClockCell.m in Sources */,
 				CE1E0466173391AD00275052 /* AddClockCon.m in Sources */,
+				CE6C70F81736A3D200636610 /* RepeatViewController.m in Sources */,
+				CE6C71181736A94100636610 /* CPPickerView.m in Sources */,
+				CE6C71191736A94100636610 /* CPPickerViewCell.m in Sources */,
+				CEFBD48C1738F26F007C04E4 /* ClockManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,7 +1085,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xin wu (RBX6Z5J5VS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1021,7 +1105,7 @@
 					"-fobjc-arc",
 					"-all_load",
 				);
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1040,8 +1124,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xin wu (RBX6Z5J5VS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xin wu (RBX6Z5J5VS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1053,8 +1137,8 @@
 					"-fobjc-arc",
 					"-all_load",
 				);
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1064,8 +1148,8 @@
 		CECAA34A17129CF200516B8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ling yang (T6DCT4BL7D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ling yang (T6DCT4BL7D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PsExport\"",
@@ -1078,8 +1162,8 @@
 					"\"$(SRCROOT)/AlarmClock\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
+				PROVISIONING_PROFILE = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1088,8 +1172,8 @@
 		CECAA34B17129CF200516B8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: ling yang (T6DCT4BL7D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ling yang (T6DCT4BL7D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 志华 党 (WSM9AKXW7U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PsExport\"",
@@ -1102,8 +1186,8 @@
 					"\"$(SRCROOT)/AlarmClock\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CB3501CA-FE05-4231-BDA6-0554A4322EBA";
+				PROVISIONING_PROFILE = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7EAE55BF-9EF9-4335-8EC7-67826573A8D4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

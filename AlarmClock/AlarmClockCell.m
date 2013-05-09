@@ -51,7 +51,25 @@
     }
     return self;
 }
-
+-(void)UpdataData
+{
+    NSDate *pdata = [ClockInfo objectForKey:@"data"];
+    NSDateFormatter *dateformat=[[NSDateFormatter  alloc]init];
+    [dateformat setDateFormat:@"HH:mm"];
+    NSString *dateStr=[dateformat  stringFromDate:pdata];
+     Time.text = dateStr;
+    [dateformat release];
+    
+    Tag.text = [ClockInfo objectForKey:@"tag"];
+    if ([[ClockInfo objectForKey:@"isOpen"] isEqual:@"1"]) {
+        [Swish setOn:YES];
+    }
+    else{
+        [Swish setOn:NO];
+    }
+    
+    
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

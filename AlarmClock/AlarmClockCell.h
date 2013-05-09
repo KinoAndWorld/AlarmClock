@@ -21,4 +21,5 @@
     
 }
 @property (retain, nonatomic) NSDictionary *ClockInfo;
+-(void)UpdataData;
 @end

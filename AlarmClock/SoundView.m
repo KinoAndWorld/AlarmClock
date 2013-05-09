@@ -97,9 +97,9 @@
     [recorderButton addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchDown];
     [recorderButton addTarget:self action:@selector(touchUp) forControlEvents:UIControlEventTouchUpInside];
     NSString *path = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/downloadFile.caf"];
-    NSLog(@"%@",path);
+  //  NSLog(@"%@",path);
     self.recordedFile = [[[NSURL alloc] initFileURLWithPath:path] autorelease];
-    NSLog(@"%@",recordedFile);
+  //  NSLog(@"%@",recordedFile);
     
     YESButton.hidden = YES;
     NOButton.hidden = YES;

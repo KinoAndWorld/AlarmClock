@@ -21,7 +21,7 @@
 
 @implementation ContentViewController
 
-@synthesize tableView;
+@synthesize tableView,pSoundContentArr;
 -(void)RefrshDataWithUserInfoType :(NSString*) userType
 {
     [tableView reloadData];
@@ -106,7 +106,13 @@
     else
     {
         NSLog(@"request.username:%@",request.username);
-        [pSoundContentArr addObject:request.username];
+       // [pSoundContentArr addObject:request.username];
+        for (int i = 0; i < [pContentArr count]; i++) {
+            NSDictionary *pDic =  [pContentArr objectAtIndex:i];
+            if ([[pDic objectForKey:@"name"] isEqual:request.username]) {
+                [pSoundContentArr addObject:pDic];
+            }
+        }
     }
     [tableView reloadData];
 }
@@ -186,7 +192,7 @@
         else{
             ((ContentCell*)cell).picView.imageUrl = [NSString stringWithFormat:@"%@/userPic/%@.png",IMAGE_URL,[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"name"]];
         }
-        if ([pSoundContentArr containsObject:[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"name"]]) {
+        if ([pSoundContentArr containsObject:[pContentArr objectAtIndex:indexPath.row - 1]]) {
             ((ContentCell*)cell).PlaySoundButton.hidden = NO;
         }
         ((ContentCell*)cell).ID = [[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"ID"];

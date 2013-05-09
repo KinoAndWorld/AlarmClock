@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddClockCon : UIViewController
-
+#import "CPPickerViewCell.h"
+@class AlarmClockViewCon;
+@interface AddClockCon : UIViewController<UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate,CPPickerViewCellDelegate, CPPickerViewCellDataSource>
+{
+    IBOutlet UITableView *pTabelView;
+    IBOutlet UIDatePicker *pPick;
+    UITextField *pTagText;
+    
+    NSMutableDictionary *pClockDataDic;
+    UISwitch *pSwich ;
+    AlarmClockViewCon *ClockCell;
+}
+@property (strong, nonatomic) NSMutableArray *settingsStorage;
+@property (strong, nonatomic) NSMutableDictionary *pClockDataDic;
+@property (strong, nonatomic) AlarmClockViewCon *ClockCell;
 @end

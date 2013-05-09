@@ -17,6 +17,7 @@
     AVAudioPlayer *player;
 }
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, readonly) NSMutableArray *pSoundContentArr;
 -(void)RefrshDataWithUserInfoType :(NSString*) userType;
 -(void) refreshView;
 @end
