@@ -40,7 +40,7 @@
 @property (nonatomic , retain) AVAudioPlayer *player;
 @property (nonatomic , retain) NSURL *recordedFile;
 @property (nonatomic , retain) IBOutlet UIButton *recorderButton;
-@property (nonatomic , retain) IBOutlet UILabel *Text,*titleText1,*titleText2,*titleText3;
+@property (nonatomic , retain) IBOutlet UILabel *LeftText,*Text,*titleText1,*titleText2,*titleText3;
 @property (nonatomic , retain) IBOutlet UIButton *YESButton,*NOButton;
 @property (nonatomic , retain) IBOutlet UIImageView *titleBack;
 - (SinaWeibo *)sinaweibo;
@@ -50,4 +50,5 @@
 +(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status;
 + (NSDictionary *)getUserData;
 +(void)ReloadAllData;
+-(void)UpdataClockText;
 @end

@@ -11,35 +11,11 @@
 #include "AppDelegate.h"
 @implementation ClockManager
 
-+(void)UpdataClockByName:(NSMutableDictionary   *) info
-{
-    if ([[info objectForKey:@"isOpen"] isEqual:@"1"]) {
-        [ClockManager CreatAClock:info];
-    }
-    else{
-        [ClockManager CancleAClock:info];
-    }
-}
+
 +(NSTimeInterval)LastAlarmTime
 {
     NSTimeInterval time= 0;
-    NSArray *pDic = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
-    NSDate *nextData = [NSDate date];
-    bool isChick = false;
-    for (int i = 0; i < [pDic count]; i++) {
-        NSDictionary *pDicdory = [pDic objectAtIndex:i];
-        if (pDicdory) {
-            NSDate *pDate = [pDicdory objectForKey:@"data"];
-            if (!isChick && [nextData earlierDate:pDate]) {
-                nextData = pDate;isChick = true;
-            }
-            else if([pDate earlierDate:nextData]){
-                nextData = pDate;
-            }
-        }
-        
-    }
-    
+    NSDate *nextData = [ClockManager GetRecentAlock];
     time = [ nextData timeIntervalSinceNow  ];
     return  time;
 }
@@ -71,43 +47,25 @@
     }
     return NO;
 }
-+(void)CreatAClock:(NSMutableDictionary   *) info
++(NSDate *)GetRecentAlock
 {
-    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        [NSThread sleepForTimeInterval:10];
-//        [ClockManager PushAClock:info];
-//    });
-//    
-//    
-//    return;
-
-}
-+(void)PushAClock:(NSTimeInterval)time
-{  
-    
-    UILocalNotification *notification=[[UILocalNotification alloc] init];
-    if (notification!=nil)
-    {
-        notification.fireDate = [NSDate dateWithTimeInterval:time sinceDate:[NSDate date]];//[info objectForKey:@"data"];
-        notification.timeZone=[NSTimeZone defaultTimeZone];
-        notification.soundName = @"../Documents/downloadFile.caf";
-        //notification.repeatInterval = 1;
-        //notification.alertBody=@"TIME！";
-        
-        notification.alertBody = [NSString stringWithFormat:@"1212 时间到了!"];
-        
-       // notification.userInfo = info;
-        
-        [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    NSArray *pDic = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
+    NSDate *nextData = [NSDate date];
+    bool isChick = false;
+    for (int i = 0; i < [pDic count]; i++) {
+        NSDictionary *pDicdory = [pDic objectAtIndex:i];
+        if (pDicdory) {
+            NSDate *pDate = [pDicdory objectForKey:@"data"];
+            if (!isChick && [nextData earlierDate:pDate]) {
+                nextData = pDate;isChick = true;
+            }
+            else if([pDate earlierDate:nextData]){
+                nextData = pDate;
+            }
+        }
         
     }
     
-    [((AppDelegate*)[UIApplication sharedApplication].delegate).audioPlayer play];
-
-}
-+(void)CancleAClock:(NSMutableDictionary   *) info
-{
-    //[[UIApplication sharedApplication] cancelLocalNotification:<#(UILocalNotification *)#>];
+    return nextData;
 }
 @end

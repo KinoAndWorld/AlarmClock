@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 @interface ClockManager : NSObject
-+(void)UpdataClockByName:(NSMutableDictionary   *) info;
-+(void)CreatAClock:(NSMutableDictionary   *) info;
-+(void)PushAClock:(NSTimeInterval) time;
 +(bool)ChickIsAlarmTime;
 +(NSTimeInterval)LastAlarmTime;
++(NSDate *)GetRecentAlock;
 @end

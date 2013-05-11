@@ -10,6 +10,8 @@
 #import "AlarmClockCell.h"
 #import "AddClockCon.h"
 #import "Config.h"
+#include "AppDelegate.h"
+#import "RootViewController.h"
 @interface AlarmClockViewCon ()
 
 @end
@@ -49,6 +51,7 @@
 -(IBAction)Done:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon UpdataClockText];
 }
 - (IBAction)tableViewEdit:(id)sender{
     [pTableView setEditing:!pTableView.editing animated:YES];

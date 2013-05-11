@@ -84,11 +84,16 @@
         ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
         [request setUsername:[[DataArray objectAtIndex:i] objectForKey:@"name"]];
         request.delegate = self;
-        
+         [request setDidReceiveResponseHeadersSelector:@selector(didReceiveResponseHeaders:)];
         [request setDownloadDestinationPath:downloadPath];
-        
+       
         [queue addOperation:request];
     }
+}
+;
+- (void)didReceiveResponseHeaders:(ASIHTTPRequest *)request
+{
+    NSLog(@"didReceiveResponseHeaders %@",[request.responseHeaders valueForKey:@"Content-Length"]);
 }
 #pragma mark - NETWORK Delegate
 - (void) requestFinished:(ASIHTTPRequest *)request {

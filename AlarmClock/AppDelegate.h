@@ -8,18 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "RootViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 @class SinaWeibo;
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
 {
     SinaWeibo *sinaweibo;
     NSMutableDictionary *pUserPicDic;
     AVAudioPlayer *audioPlayer ;
+    AVQueuePlayer *theQueuePlayer;
     UIBackgroundTaskIdentifier bgTask;
-    bool inBackground;
+    bool isAlarmBegin;
 }
 @property (readonly, nonatomic) SinaWeibo *sinaweibo;
 +(NSString*)getClearContext:(NSString*)string;
--(void)PushAClock:(id)info;
+-(void)PushAClock:(NSTimeInterval)time;
+-(void)InitTheAudioPlayer;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSMutableDictionary *pUserPicDic;

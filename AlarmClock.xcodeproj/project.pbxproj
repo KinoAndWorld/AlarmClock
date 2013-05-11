@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE02CD29173C908900CAFCF4 /* test2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE02CD28173C908900CAFCF4 /* test2.mp3 */; };
+		CE02CD2B173CDD8600CAFCF4 /* haha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE02CD2A173CDD8600CAFCF4 /* haha.mp3 */; };
+		CE02CD2D173CE4D100CAFCF4 /* haha2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE02CD2C173CE4D100CAFCF4 /* haha2.mp3 */; };
+		CE02CD2F173CEB0700CAFCF4 /* silence-10sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE02CD2E173CEB0700CAFCF4 /* silence-10sec.mp3 */; };
 		CE044FA8171CEC3E00DBC32A /* RegiestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE044FA6171CEC3E00DBC32A /* RegiestView.m */; };
 		CE044FA9171CEC3E00DBC32A /* RegiestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE044FA7171CEC3E00DBC32A /* RegiestView.xib */; };
 		CE044FAB171CECB500DBC32A /* UI_RegiestBack.PNG in Resources */ = {isa = PBXBuildFile; fileRef = CE044FAA171CECB500DBC32A /* UI_RegiestBack.PNG */; };
@@ -197,6 +201,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE02CD28173C908900CAFCF4 /* test2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test2.mp3; sourceTree = "<group>"; };
+		CE02CD2A173CDD8600CAFCF4 /* haha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = haha.mp3; sourceTree = "<group>"; };
+		CE02CD2C173CE4D100CAFCF4 /* haha2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = haha2.mp3; sourceTree = "<group>"; };
+		CE02CD2E173CEB0700CAFCF4 /* silence-10sec.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "silence-10sec.mp3"; sourceTree = "<group>"; };
 		CE044FA5171CEC3E00DBC32A /* RegiestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestView.h; sourceTree = "<group>"; };
 		CE044FA6171CEC3E00DBC32A /* RegiestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestView.m; sourceTree = "<group>"; };
 		CE044FA7171CEC3E00DBC32A /* RegiestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegiestView.xib; sourceTree = "<group>"; };
@@ -483,6 +491,9 @@
 				CE1E0463173391AD00275052 /* AddClockCon.h */,
 				CE1E0464173391AD00275052 /* AddClockCon.m */,
 				CE1E0465173391AD00275052 /* AddClockCon.xib */,
+				CE02CD2A173CDD8600CAFCF4 /* haha.mp3 */,
+				CE02CD2C173CE4D100CAFCF4 /* haha2.mp3 */,
+				CE02CD2E173CEB0700CAFCF4 /* silence-10sec.mp3 */,
 				CE6C70F51736A3D200636610 /* RepeatViewController.h */,
 				CE6C70F61736A3D200636610 /* RepeatViewController.m */,
 				CE6C70F71736A3D200636610 /* RepeatViewController.xib */,
@@ -662,6 +673,7 @@
 				CE80D9E217262CFC00A5C773 /* Audio */,
 				CE06B9E7171E8BF600556A00 /* UserAction */,
 				CE76148C1713B4B900FF4E20 /* test.mp3 */,
+				CE02CD28173C908900CAFCF4 /* test2.mp3 */,
 				CECAA44E1713199A00516B8A /* 1.png */,
 				CE044FC8171D4E5E00DBC32A /* ErrorView.m */,
 				CE044FC7171D4E5E00DBC32A /* ErrorView.h */,
@@ -912,6 +924,10 @@
 				CE6C71201736A94100636610 /* stretchableGlass@2x.png in Resources */,
 				CEFBD48E17390468007C04E4 /* OpenDoor.caf in Resources */,
 				CEFBD49117390538007C04E4 /* logo-1024-1副本.png in Resources */,
+				CE02CD29173C908900CAFCF4 /* test2.mp3 in Resources */,
+				CE02CD2B173CDD8600CAFCF4 /* haha.mp3 in Resources */,
+				CE02CD2D173CE4D100CAFCF4 /* haha2.mp3 in Resources */,
+				CE02CD2F173CEB0700CAFCF4 /* silence-10sec.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,11 +15,12 @@
 #import "SoundView.h"
 #import "lame.h"
 #import "AlarmClockViewCon.h"
+#import "ClockManager.h"
 @implementation RootViewController
 
 @synthesize userInfo,tencentOAuthUserInfo,pPublicContentViewController,pFriendContentViewController;
 
-@synthesize player,Text,titleText1,titleText2,titleText3,titleBack;
+@synthesize player,LeftText,Text,titleText1,titleText2,titleText3,titleBack;
 @synthesize recordedFile,recorderButton,YESButton,NOButton;
 -(IBAction)PushAlarmClock:(id)sender
 {
@@ -173,11 +174,7 @@
     NOButton.hidden = YES;
     recorderButton.hidden = NO;
     
-    CGAffineTransform at = CGAffineTransformMakeRotation(24*M_PI/180.0);
-    [Text setTransform:at];
-    
-    CALayer *contentLayer = [Text layer];
-    contentLayer.anchorPoint = CGPointMake(0.5,0.5);
+    [self UpdataClockText];
 }
 
 
@@ -597,7 +594,7 @@
 }
 -(void)CancleUploadAudio:(id)sender
 {
-    Text.text = @" ";
+    Text.text = @"按下录音";
     YESButton.hidden = YES;
     NOButton.hidden = YES;
     recorderButton.hidden = NO;
@@ -626,4 +623,17 @@
     NSLog(@"Response Fail %d : %@", request.responseStatusCode, [request responseString]);
 }
 
+
+-(void)UpdataClockText
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE HH:mm"];
+    
+    //Optionally for time zone converstions
+    [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
+    
+    NSString *stringFromDate = [formatter stringFromDate:[ClockManager GetRecentAlock]];
+    LeftText.text = stringFromDate;
+    [formatter release];
+}
 @end

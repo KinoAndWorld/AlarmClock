@@ -12,6 +12,7 @@
 #include "Config.h"
 #include "ClockManager.h"
 #include "AlarmClockViewCon.h"
+
 @interface AddClockCon ()
 
 @end
@@ -35,6 +36,8 @@
     
     [ClockCell loadData];
     [ClockCell.pTableView reloadData];
+    
+
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
