@@ -32,7 +32,14 @@
 -(IBAction)PushRegistView:(id)sender
 {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    RegiestView *pLogInview = [[RegiestView alloc] initWithNibName:@"RegiestView" bundle:nil];
+    RegiestView *pLogInview ;
+    if (iPhone5) {
+    pLogInview = [[RegiestView alloc] initWithNibName:@"RegiestView_ip5" bundle:nil];
+    }
+    else{
+     pLogInview = [[RegiestView alloc] initWithNibName:@"RegiestView" bundle:nil];
+    }
+   
     [appDelegate.pRootViewCon.navigationController pushViewController:pLogInview animated:YES];
     [pLogInview release];
 }

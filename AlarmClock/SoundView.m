@@ -117,15 +117,15 @@
 {
     NSLog(@"==%@==",recordedFile);
     Text.text = @"松开完成录音";
-    session = [AVAudioSession sharedInstance];
-    session.delegate = self;
-    NSError *sessionError;
-    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
-    
-    if(session == nil)
-        NSLog(@"Error creating session: %@", [sessionError description]);
-    else
-        [session setActive:YES error:nil];
+//    session = [AVAudioSession sharedInstance];
+//    session.delegate = self;
+//    NSError *sessionError;
+//    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
+//    
+//    if(session == nil)
+//        NSLog(@"Error creating session: %@", [sessionError description]);
+//    else
+//        [session setActive:YES error:nil];
     /*
     NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
                                                          [NSNumber numberWithFloat:44100.0], AVSampleRateKey,
@@ -176,7 +176,6 @@
     {
         NSLog(@"ERror creating player: %@", [playerError description]);
     }
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategorySoloAmbient error: nil];
     player.delegate = self;
     [audioPlayer release];
     [player play];

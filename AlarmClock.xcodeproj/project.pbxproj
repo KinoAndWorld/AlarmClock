@@ -13,7 +13,7 @@
 		CE02CD2F173CEB0700CAFCF4 /* silence-10sec.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE02CD2E173CEB0700CAFCF4 /* silence-10sec.mp3 */; };
 		CE044FA8171CEC3E00DBC32A /* RegiestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE044FA6171CEC3E00DBC32A /* RegiestView.m */; };
 		CE044FA9171CEC3E00DBC32A /* RegiestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE044FA7171CEC3E00DBC32A /* RegiestView.xib */; };
-		CE044FAB171CECB500DBC32A /* UI_RegiestBack.PNG in Resources */ = {isa = PBXBuildFile; fileRef = CE044FAA171CECB500DBC32A /* UI_RegiestBack.PNG */; };
+		CE044FAB171CECB500DBC32A /* UI_RegiestBack@2x.PNG in Resources */ = {isa = PBXBuildFile; fileRef = CE044FAA171CECB500DBC32A /* UI_RegiestBack@2x.PNG */; };
 		CE044FAE171CF0D200DBC32A /* ui_backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FAC171CF0D200DBC32A /* ui_backButton.png */; };
 		CE044FAF171CF0D200DBC32A /* ui_doneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FAD171CF0D200DBC32A /* ui_doneButton.png */; };
 		CE044FB1171CF34F00DBC32A /* DefaultBack1.png in Resources */ = {isa = PBXBuildFile; fileRef = CE044FB0171CF34F00DBC32A /* DefaultBack1.png */; };
@@ -40,6 +40,7 @@
 		CE09B76D17320A5000221012 /* AlarmClockViewCon.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE09B76B17320A5000221012 /* AlarmClockViewCon.xib */; };
 		CE09B77017320AA400221012 /* AlarmClockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE09B76F17320AA400221012 /* AlarmClockCell.m */; };
 		CE09B77217320AB400221012 /* AlarmClockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE09B77117320AB400221012 /* AlarmClockCell.xib */; };
+		CE15BB7C1741C86300DDFD9C /* RegiestView_ip5.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE15BB7B1741C86300DDFD9C /* RegiestView_ip5.xib */; };
 		CE1E045D1733703000275052 /* narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CE1E045C1733703000275052 /* narrow.png */; };
 		CE1E0466173391AD00275052 /* AddClockCon.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1E0464173391AD00275052 /* AddClockCon.m */; };
 		CE1E0467173391AD00275052 /* AddClockCon.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1E0465173391AD00275052 /* AddClockCon.xib */; };
@@ -55,6 +56,7 @@
 		CE2E52E1171BF52F0047D185 /* ui_login.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E52DF171BF52F0047D185 /* ui_login.png */; };
 		CE2E52E2171BF52F0047D185 /* ui_regiest.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2E52E0171BF52F0047D185 /* ui_regiest.png */; };
 		CE2E52E8171C44F00047D185 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2E52E7171C44F00047D185 /* QuartzCore.framework */; };
+		CE35F558173F708B005C7D86 /* Sleep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CE35F557173F708B005C7D86 /* Sleep.mp3 */; };
 		CE3FBA9B172774E400738916 /* ui_noButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA99172774E400738916 /* ui_noButton.png */; };
 		CE3FBA9C172774E400738916 /* ui_yesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = CE3FBA9A172774E400738916 /* ui_yesButton.png */; };
 		CE4DAE58173B483400A5E693 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4DAE57173B483400A5E693 /* CoreAudio.framework */; };
@@ -183,6 +185,8 @@
 		CECAA4471712A4F900516B8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4461712A4F900516B8A /* SystemConfiguration.framework */; };
 		CECAA4491712A59900516B8A /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CECAA4481712A59900516B8A /* libz.1.1.3.dylib */; };
 		CECAA44F1713199A00516B8A /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = CECAA44E1713199A00516B8A /* 1.png */; };
+		CEE06B1F17437CB0006392FE /* ui_headFront.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE06B1E17437CB0006392FE /* ui_headFront.png */; };
+		CEE06B22174388ED006392FE /* EditClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE06B21174388ED006392FE /* EditClockViewController.m */; };
 		CEFBD48C1738F26F007C04E4 /* ClockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFBD48B1738F26F007C04E4 /* ClockManager.m */; };
 		CEFBD48E17390468007C04E4 /* OpenDoor.caf in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD48D17390468007C04E4 /* OpenDoor.caf */; };
 		CEFBD48F17390468007C04E4 /* OpenDoor.caf in Resources */ = {isa = PBXBuildFile; fileRef = CEFBD48D17390468007C04E4 /* OpenDoor.caf */; };
@@ -208,7 +212,7 @@
 		CE044FA5171CEC3E00DBC32A /* RegiestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestView.h; sourceTree = "<group>"; };
 		CE044FA6171CEC3E00DBC32A /* RegiestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestView.m; sourceTree = "<group>"; };
 		CE044FA7171CEC3E00DBC32A /* RegiestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegiestView.xib; sourceTree = "<group>"; };
-		CE044FAA171CECB500DBC32A /* UI_RegiestBack.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UI_RegiestBack.PNG; sourceTree = "<group>"; };
+		CE044FAA171CECB500DBC32A /* UI_RegiestBack@2x.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UI_RegiestBack@2x.PNG"; sourceTree = "<group>"; };
 		CE044FAC171CF0D200DBC32A /* ui_backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_backButton.png; sourceTree = "<group>"; };
 		CE044FAD171CF0D200DBC32A /* ui_doneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_doneButton.png; sourceTree = "<group>"; };
 		CE044FB0171CF34F00DBC32A /* DefaultBack1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultBack1.png; sourceTree = SOURCE_ROOT; };
@@ -239,6 +243,7 @@
 		CE09B76E17320AA400221012 /* AlarmClockCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmClockCell.h; sourceTree = "<group>"; };
 		CE09B76F17320AA400221012 /* AlarmClockCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmClockCell.m; sourceTree = "<group>"; };
 		CE09B77117320AB400221012 /* AlarmClockCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlarmClockCell.xib; sourceTree = "<group>"; };
+		CE15BB7B1741C86300DDFD9C /* RegiestView_ip5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegiestView_ip5.xib; sourceTree = "<group>"; };
 		CE1E045C1733703000275052 /* narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = narrow.png; sourceTree = "<group>"; };
 		CE1E0463173391AD00275052 /* AddClockCon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClockCon.h; sourceTree = "<group>"; };
 		CE1E0464173391AD00275052 /* AddClockCon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClockCon.m; sourceTree = "<group>"; };
@@ -252,6 +257,7 @@
 		CE2E52DF171BF52F0047D185 /* ui_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_login.png; sourceTree = "<group>"; };
 		CE2E52E0171BF52F0047D185 /* ui_regiest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ui_regiest.png; sourceTree = "<group>"; };
 		CE2E52E7171C44F00047D185 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE35F557173F708B005C7D86 /* Sleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sleep.mp3; sourceTree = "<group>"; };
 		CE3FBA99172774E400738916 /* ui_noButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_noButton.png; path = PsExport/ui_noButton.png; sourceTree = SOURCE_ROOT; };
 		CE3FBA9A172774E400738916 /* ui_yesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_yesButton.png; path = PsExport/ui_yesButton.png; sourceTree = SOURCE_ROOT; };
 		CE4DAE57173B483400A5E693 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -389,6 +395,9 @@
 		CECAA4461712A4F900516B8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CECAA4481712A59900516B8A /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		CECAA44E1713199A00516B8A /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		CEE06B1E17437CB0006392FE /* ui_headFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ui_headFront.png; path = PsExport/ui_headFront.png; sourceTree = SOURCE_ROOT; };
+		CEE06B20174388ED006392FE /* EditClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditClockViewController.h; sourceTree = "<group>"; };
+		CEE06B21174388ED006392FE /* EditClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditClockViewController.m; sourceTree = "<group>"; };
 		CEFBD48A1738F26F007C04E4 /* ClockManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockManager.h; sourceTree = "<group>"; };
 		CEFBD48B1738F26F007C04E4 /* ClockManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockManager.m; sourceTree = "<group>"; };
 		CEFBD48D17390468007C04E4 /* OpenDoor.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenDoor.caf; sourceTree = "<group>"; };
@@ -468,6 +477,7 @@
 				CE044FA5171CEC3E00DBC32A /* RegiestView.h */,
 				CE044FA6171CEC3E00DBC32A /* RegiestView.m */,
 				CE044FA7171CEC3E00DBC32A /* RegiestView.xib */,
+				CE15BB7B1741C86300DDFD9C /* RegiestView_ip5.xib */,
 				CE759C6F171FD0E40091353C /* LoginChooseViewConViewController.h */,
 				CE759C70171FD0E50091353C /* LoginChooseViewConViewController.m */,
 				CE759C71171FD0E50091353C /* LoginChooseViewConViewController.xib */,
@@ -491,6 +501,8 @@
 				CE1E0463173391AD00275052 /* AddClockCon.h */,
 				CE1E0464173391AD00275052 /* AddClockCon.m */,
 				CE1E0465173391AD00275052 /* AddClockCon.xib */,
+				CEE06B20174388ED006392FE /* EditClockViewController.h */,
+				CEE06B21174388ED006392FE /* EditClockViewController.m */,
 				CE02CD2A173CDD8600CAFCF4 /* haha.mp3 */,
 				CE02CD2C173CE4D100CAFCF4 /* haha2.mp3 */,
 				CE02CD2E173CEB0700CAFCF4 /* silence-10sec.mp3 */,
@@ -517,6 +529,7 @@
 		CE5A83DC171A8569000E42E5 /* PsExport */ = {
 			isa = PBXGroup;
 			children = (
+				CEE06B1E17437CB0006392FE /* ui_headFront.png */,
 				CE1E045C1733703000275052 /* narrow.png */,
 				CE3FBA99172774E400738916 /* ui_noButton.png */,
 				CE3FBA9A172774E400738916 /* ui_yesButton.png */,
@@ -530,7 +543,7 @@
 				CE759C68171FD0CB0091353C /* ui_log_sina.png */,
 				CE2E52DF171BF52F0047D185 /* ui_login.png */,
 				CE2E52E0171BF52F0047D185 /* ui_regiest.png */,
-				CE044FAA171CECB500DBC32A /* UI_RegiestBack.PNG */,
+				CE044FAA171CECB500DBC32A /* UI_RegiestBack@2x.PNG */,
 				CE5A83EB171A8569000E42E5 /* ui_0032_Layer-3.png */,
 				CE5A840A171A85EC000E42E5 /* ui_addButton.png */,
 				CE5A840B171A85EC000E42E5 /* ui_addFriendButtonOFF.png */,
@@ -674,6 +687,7 @@
 				CE06B9E7171E8BF600556A00 /* UserAction */,
 				CE76148C1713B4B900FF4E20 /* test.mp3 */,
 				CE02CD28173C908900CAFCF4 /* test2.mp3 */,
+				CE35F557173F708B005C7D86 /* Sleep.mp3 */,
 				CECAA44E1713199A00516B8A /* 1.png */,
 				CE044FC8171D4E5E00DBC32A /* ErrorView.m */,
 				CE044FC7171D4E5E00DBC32A /* ErrorView.h */,
@@ -884,7 +898,7 @@
 				CE2E52E1171BF52F0047D185 /* ui_login.png in Resources */,
 				CE2E52E2171BF52F0047D185 /* ui_regiest.png in Resources */,
 				CE044FA9171CEC3E00DBC32A /* RegiestView.xib in Resources */,
-				CE044FAB171CECB500DBC32A /* UI_RegiestBack.PNG in Resources */,
+				CE044FAB171CECB500DBC32A /* UI_RegiestBack@2x.PNG in Resources */,
 				CE044FAE171CF0D200DBC32A /* ui_backButton.png in Resources */,
 				CE044FAF171CF0D200DBC32A /* ui_doneButton.png in Resources */,
 				CE044FB1171CF34F00DBC32A /* DefaultBack1.png in Resources */,
@@ -928,6 +942,9 @@
 				CE02CD2B173CDD8600CAFCF4 /* haha.mp3 in Resources */,
 				CE02CD2D173CE4D100CAFCF4 /* haha2.mp3 in Resources */,
 				CE02CD2F173CEB0700CAFCF4 /* silence-10sec.mp3 in Resources */,
+				CE35F558173F708B005C7D86 /* Sleep.mp3 in Resources */,
+				CE15BB7C1741C86300DDFD9C /* RegiestView_ip5.xib in Resources */,
+				CEE06B1F17437CB0006392FE /* ui_headFront.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1030,6 +1047,7 @@
 				CE6C71181736A94100636610 /* CPPickerView.m in Sources */,
 				CE6C71191736A94100636610 /* CPPickerViewCell.m in Sources */,
 				CEFBD48C1738F26F007C04E4 /* ClockManager.m in Sources */,
+				CEE06B22174388ED006392FE /* EditClockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

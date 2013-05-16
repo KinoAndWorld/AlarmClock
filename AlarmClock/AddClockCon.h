@@ -22,4 +22,6 @@
 @property (strong, nonatomic) NSMutableArray *settingsStorage;
 @property (strong, nonatomic) NSMutableDictionary *pClockDataDic;
 @property (strong, nonatomic) AlarmClockViewCon *ClockCell;
+@property (strong, nonatomic) UITableView *pTabelView;
++(NSString*)getNameForRepeat:(NSArray*)Data;
 @end

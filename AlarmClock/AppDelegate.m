@@ -38,10 +38,6 @@
     pUserPicDic = [[NSMutableDictionary alloc] initWithCapacity:20];
     
     
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
-    [[AVAudioSession sharedInstance] setActive: YES error: nil];
-    [[AVAudioSession sharedInstance] setDelegate:self];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(volumeChanged:)
                                                  name:@"AVSystemController_SystemVolumeDidChangeNotification"
@@ -51,7 +47,7 @@
     [volumeView sizeToFit];
     [self.window addSubview:volumeView];
     
-    
+    //silence-10sec
    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"silence-10sec" ofType: @"mp3"];
     NSError  *error;
     audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:[[[NSURL alloc]initFileURLWithPath:soundFilePath] autorelease] error:&error];
@@ -66,12 +62,30 @@
 
 
     isAlarmBegin = NO;
+    
+    
+
+    theQueuePlayer = [[AVQueuePlayer alloc] initWithItems:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(playerItemDidReachEnd:)
+                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+                                               object:nil];
+    
+    AVPlayerLayer *layer = [AVPlayerLayer  playerLayerWithPlayer:theQueuePlayer];
+    theQueuePlayer.actionAtItemEnd = AVPlayerItemStatusReadyToPlay;
+    layer.frame = CGRectMake(0, 0, 1024, 768);
+    
+    [self.window.layer addSublayer:layer];
+    
+    
     return YES;
 }
 # pragma mark -
 # pragma mark AVAudioSession Delegate Methods
 - (void)beginInterruption {
     NSLog(@"beginInterruption");
+   
 }
 - (void)endInterruption {
      NSLog(@"endInterruption");
@@ -79,6 +93,7 @@
 }
 - (void)endInterruptionWithFlags:(NSUInteger)flags {
       NSLog(@"endInterruptionWithFlags");
+      [audioPlayer play];
 }
 - (void)inputIsAvailableChanged:(BOOL)isInputAvailable {
       NSLog(@"inputIsAvailableChanged");
@@ -102,6 +117,7 @@
 }
 -(void)playerItemDidReachEnd:(NSNotification*)sender
 {
+     NSLog(@"next");
     if (sender.object == [[theQueuePlayer items] lastObject]) {
         NSLog(@"play last");
          AVPlayerItem *newItem = [AVPlayerItem playerItemWithAsset:[(AVPlayerItem*)sender.object asset]];
@@ -111,7 +127,7 @@
     [theQueuePlayer advanceToNextItem];
     [theQueuePlayer play];
     
-    isAlarmBegin = YES;
+   
    
 }
 - (void)volumeChanged:(NSNotification *)notification
@@ -119,7 +135,19 @@
     if (isAlarmBegin) {
          NSLog(@"sleep");
         [self BeginAClock:5];
-         [theQueuePlayer pause];
+        [theQueuePlayer pause];
+        isAlarmBegin = NO;
+        
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource: @"Sleep" ofType: @"mp3"];
+        NSError  *error;
+        AVAudioPlayer *audioPlayer1 = [[AVAudioPlayer alloc]initWithContentsOfURL:[[[NSURL alloc]initFileURLWithPath:soundFilePath] autorelease] error:&error];
+        if (!audioPlayer1) {
+            NSLog(@"error:%@ ",error);
+        }
+        [audioPlayer1 prepareToPlay];
+        audioPlayer1.volume = 1;
+        
+        [audioPlayer1 play];
     }
    
 }
@@ -127,6 +155,11 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     NSMutableDictionary *pClockInfo = [NSMutableDictionary dictionary];
+    
+    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+    [[AVAudioSession sharedInstance] setActive: YES error: nil];
+    [[AVAudioSession sharedInstance] setDelegate:self];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"haha" ofType:@"mp3"];
     
@@ -138,36 +171,32 @@
     else{
         NSDictionary *pContent = [pArray objectAtIndex:arc4random() % [pArray count]];
         path2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.mp3",[pContent objectForKey:@"name"]]];
+       
+        [pClockInfo setObject:[pContent objectForKey:@"name"] forKey:@"voiceName"];
     }
 
-    
     NSURL *url =[NSURL fileURLWithPath:path];
     NSURL *url2 =[NSURL fileURLWithPath:path2];
     AVPlayerItem *thePlayerItemA = [AVPlayerItem playerItemWithURL:url];
     AVPlayerItem *thePlayerItemB = [AVPlayerItem playerItemWithURL:url2];
     
-    NSArray *theItems = [NSArray arrayWithObjects:thePlayerItemA,thePlayerItemB, nil];
-    theQueuePlayer = [[AVQueuePlayer alloc] initWithItems:theItems];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playerItemDidReachEnd:)
-                                                 name:AVPlayerItemDidPlayToEndTimeNotification
-                                               object:nil];
-    
-    AVPlayerLayer *layer = [AVPlayerLayer  playerLayerWithPlayer:theQueuePlayer];
-    theQueuePlayer.actionAtItemEnd = AVPlayerItemStatusReadyToPlay;
-    layer.frame = CGRectMake(0, 0, 1024, 768);
-    
-    [self.window.layer addSublayer:layer];
+    [theQueuePlayer removeAllItems];
+    [theQueuePlayer insertItem:thePlayerItemA afterItem:nil];
+    [theQueuePlayer insertItem:thePlayerItemB afterItem:thePlayerItemA];
     
     NSTimeInterval time = [ClockManager LastAlarmTime];
-    if (time < 0 ) {
+    if (time <= 0 ) {
         NSLog(@"no Alarm");
-        return;
+        [pClockInfo setObject:NULL forKey:@"clockData"];
     }
-    NSLog(@"next Alarm: %@",[NSDate dateWithTimeIntervalSinceNow:time]);
+    else{
+        NSLog(@"next Alarm: %@",[NSDate dateWithTimeIntervalSinceNow:time]);
+        [pClockInfo setObject:[NSDate dateWithTimeIntervalSinceNow:time] forKey:@"clockData"];
+        [self BeginAClock:time];
+    }
     
-    [self BeginAClock:time];
+    [[NSUserDefaults standardUserDefaults] setObject:pClockInfo forKey:NextClockInfo];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 -(void)BeginAClock:(NSTimeInterval)time
 {
@@ -182,6 +211,7 @@
         [self PushAClock:1];
         
         [[UIApplication sharedApplication] endBackgroundTask:self.bgTask];
+        
     });
 }
 -(void)PushAClock:(NSTimeInterval)time
@@ -202,6 +232,7 @@
         //   [audioPlayer playAtTime:audioPlayer.deviceCurrentTime + time];
        // [theQueuePlayer advanceToNextItem];
         [theQueuePlayer play];
+         isAlarmBegin = YES;
         
     }
 }
@@ -209,8 +240,24 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-   // [audioPlayer pause];
+    [theQueuePlayer pause];
+    isAlarmBegin = NO;
     
+   NSDictionary *clockInfo = [[NSUserDefaults standardUserDefaults] objectForKey:NextClockInfo];
+    NSDate *date = [clockInfo objectForKey:@"clockData"];
+    NSLog(@"clockInfo:%@",clockInfo);
+    
+    NSArray *pCLockArray = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
+    for (NSMutableDictionary *pDic in pCLockArray) {
+        if ([ClockManager  ChickISSameClock:[pDic objectForKey:@"data"] :date] && ![ClockManager ChickISHaveRepeat:[pDic objectForKey:@"repeat"]] ) {
+            [pDic setObject:@"0" forKey:@"isOpen"];
+            NSLog(@"clock is change");
+        }
+    }
+    NSLog(@"pCLockArray:%@",pCLockArray);
+    [[NSUserDefaults standardUserDefaults] setObject:pCLockArray forKey:UserClock];
+    
+    [pRootViewCon UpdataClockText];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

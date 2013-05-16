@@ -64,6 +64,7 @@
 // Configuration
 @property (nonatomic, strong) UIFont *itemFont;
 @property (nonatomic, strong) UIColor *itemColor;
+@property (nonatomic, strong) NSMutableSet *visibleViews;
 @property (nonatomic) BOOL showGlass;
 @property (nonatomic) UIEdgeInsets peekInset;
 

@@ -10,6 +10,7 @@
 #import "Config.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#include "AppDelegate.h"
 @interface RegiestView ()
 
 @end
@@ -39,6 +40,10 @@
     pErrorView = [nib objectAtIndex:0];
     [self.view insertSubview:pErrorView atIndex:1];
    
+    
+//    if (iPhone5) {
+//        ScrollView.frame = CGRectMake(30, 200,  ScrollView.frame.size.width,  ScrollView.frame.size.height);
+//    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +63,10 @@
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     [UIView setAnimationDuration:0.01];
     [UIView setAnimationDelay:0.2];
+    if (iPhone5) {
+        [ScrollView setFrame:CGRectMake(ScrollView.frame.origin.x, ScrollView.frame.origin.y, ScrollView.frame.size.width, 300)];
+    }
+    else
     [ScrollView setFrame:CGRectMake(ScrollView.frame.origin.x, ScrollView.frame.origin.y, ScrollView.frame.size.width, 200)];
     [UIView commitAnimations];
     

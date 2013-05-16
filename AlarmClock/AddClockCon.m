@@ -18,14 +18,26 @@
 @end
 
 @implementation AddClockCon
-@synthesize settingsStorage,pClockDataDic,ClockCell;
+@synthesize settingsStorage,pClockDataDic,ClockCell,pTabelView;
+-(IBAction)Cancle :(id)sender
+{
+     [self.navigationController popToRootViewControllerAnimated:YES];
+}
 -(IBAction)Done :(id)sender
 {
-   
     [self.navigationController popToRootViewControllerAnimated:YES];
-    [pClockDataDic setObject:[pPick date] forKey:@"data"];
+    
+    NSDate * date = [pPick date];
+    NSCalendar*calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps;
+    comps =[calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit |NSSecondCalendarUnit)
+            
+                       fromDate:date];
+    NSInteger second = [comps second];
+    
+    [pClockDataDic setObject:[date dateByAddingTimeInterval:-second] forKey:@"data"];
     NSArray *pDataDic = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
-     NSLog(@"pDataDic:::%@",pDataDic);
+    NSLog(@"pDataDic:::%@",pDataDic);
     NSMutableArray *pTempArray = [NSMutableArray arrayWithArray:pDataDic];
     [pTempArray addObject:pClockDataDic];
     NSMutableArray *pTempArray2 = [NSArray arrayWithArray:pTempArray];
@@ -37,7 +49,7 @@
     [ClockCell loadData];
     [ClockCell.pTableView reloadData];
     
-
+    
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,6 +65,7 @@
     [super viewDidLoad];
     self.settingsStorage = [NSMutableArray arrayWithObjects:[NSMutableArray arrayWithObject:[NSNumber numberWithInt:0]], [NSMutableArray arrayWithObject:[NSNumber numberWithInt:1]], nil];
     [pPick setDate:[NSDate date] animated:YES];
+
     
     NSMutableArray *pRepeatArray = [NSMutableArray arrayWithObjects:@"0",@"0",@"0",@"0",@"0",@"0",@"0", nil];
     NSDate *pData = [pPick date];
@@ -82,6 +95,7 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 1) {
+        
         CPPickerViewCell* cell2 = nil;
         cell2 = [[CPPickerViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
         cell2.textLabel.text = @"闹铃频道";
@@ -111,17 +125,38 @@
     int rightLablePosX = 250;
     if (indexPath.row == 0) {
         cell.textLabel.text = @"重复";
-        UILabel *pLable = [[UILabel alloc] initWithFrame:CGRectMake(rightLablePosX, rightLablePosY, 90, 25)];
+        
+        for (UILabel *lable in [cell subviews]) {
+            if (lable.tag == 123) {
+                [lable removeFromSuperview];
+                break;
+            }
+        }
+        UILabel *pLable = [[UILabel alloc] initWithFrame:CGRectMake(rightLablePosX-200, rightLablePosY, 230, 25)];
+        pLable.textAlignment   = NSTextAlignmentRight;
         pLable.backgroundColor = [UIColor clearColor];
         pLable.textColor = [UIColor redColor];
+        pLable.tag = 123;
         [cell addSubview:pLable];
-        pLable.text =@"永不";
+        if (pClockDataDic && [pClockDataDic objectForKey:@"repeat"] &&[[pClockDataDic objectForKey:@"repeat"] isKindOfClass:[NSArray class]]) {
+             pLable.text = [AddClockCon getNameForRepeat:[pClockDataDic objectForKey:@"repeat"]];
+        }
+        else{
+             pLable.text = @"永不";
+        }
         [pLable release];
     }
     else if (indexPath.row == 2) {
         cell.textLabel.text = @"小睡";
         cell.accessoryType = UITableViewCellAccessoryNone;
+        for (UISwitch *lable in [cell subviews]) {
+            if (lable.tag == 123) {
+                [lable removeFromSuperview];
+                break;
+            }
+        }
         pSwich= [[UISwitch alloc] initWithFrame:CGRectMake(rightLablePosX-30, rightLablePosY, 90, 20)];
+        pSwich.tag = 123;
         [cell addSubview:pSwich];
         [pSwich addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         [pSwich setOn:YES];
@@ -129,10 +164,20 @@
         }
     else if (indexPath.row == 3) {
         cell.textLabel.text = @"标签";
+        
+        for (UITextField *lable in [cell subviews]) {
+            if (lable.tag == 123) {
+                [lable removeFromSuperview];
+                break;
+            }
+        }
+        
         pTagText= [[UITextField alloc] initWithFrame:CGRectMake(rightLablePosX-185, rightLablePosY, 220, 20)];
         pTagText.delegate = self;
+        
          pTagText.backgroundColor = [UIColor clearColor];
         pTagText.textColor = [UIColor redColor];
+        pTagText.tag = 123;
         pTagText.textAlignment = NSTextAlignmentRight;
         cell.accessoryType = UITableViewCellAccessoryNone;
         [cell addSubview:pTagText];
@@ -156,10 +201,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Do Nothing
-    RepeatViewController *pRrepeatViewCon = [[RepeatViewController alloc] init];
-    pRrepeatViewCon.pAddClockCon = self;
-    [self.navigationController pushViewController:pRrepeatViewCon animated:YES];
-    [pRrepeatViewCon release];
+    if (indexPath.row == 0) {
+        RepeatViewController *pRrepeatViewCon = [[RepeatViewController alloc] init];
+        pRrepeatViewCon.pAddClockCon = self;
+        [self.navigationController pushViewController:pRrepeatViewCon animated:YES];
+        [pRrepeatViewCon release];
+    }
+
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -197,5 +245,74 @@
 
 - (void)pickerViewAtIndexPath:(NSIndexPath *)pickerPath didSelectItem:(NSInteger)item {
     [pClockDataDic setObject:[NSString stringWithFormat:@"%d",item] forKey:@"isSleepLittle"];
+}
+
++(NSString*)getNameForRepeat:(NSArray*)Data
+{
+    NSString *pString = @"";
+    bool isWork = false;
+    if ([Data[0] isEqual:@"1"] && [Data[1] isEqual:@"1"] && [Data[2] isEqual:@"1"] && [Data[3] isEqual:@"1"] && [Data[4] isEqual:@"1"] && [Data[5] isEqual:@"0"] && [Data[6] isEqual:@"0"]) {
+        pString = @"工作日";
+    }
+    else if([Data[0] isEqual:@"0"] && [Data[1] isEqual:@"0"] && [Data[2] isEqual:@"0"] && [Data[3] isEqual:@"0"] && [Data[4] isEqual:@"0"] && [Data[5] isEqual:@"1"] && [Data[6] isEqual:@"1"])
+    {
+        pString = @"周末";
+    }
+    else if([Data[0] isEqual:@"1"] && [Data[1] isEqual:@"1"] && [Data[2] isEqual:@"1"] && [Data[3] isEqual:@"1"] && [Data[4] isEqual:@"1"] && [Data[5] isEqual:@"1"] && [Data[6] isEqual:@"1"]){
+        pString = @"每天";
+    }
+    else if([Data[0] isEqual:@"0"] && [Data[1] isEqual:@"0"] && [Data[2] isEqual:@"0"] && [Data[3] isEqual:@"0"] && [Data[4] isEqual:@"0"] && [Data[5] isEqual:@"0"] && [Data[6] isEqual:@"0"]){
+        pString = @"不重复";
+    }
+    else{
+        if ([Data[0] isEqual:@"1"]) {
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期一"];
+             isWork = true;
+        }
+        if ([Data[1] isEqual:@"1"]) {
+            if (isWork) {
+                 pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期二"];
+             isWork = true;
+        }
+        if ([Data[2] isEqual:@"1"]) {
+            if (isWork) {
+                pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期三"];
+             isWork = true;
+        }
+        if ([Data[3] isEqual:@"1"]) {
+            if (isWork) {
+                pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期四"];
+             isWork = true;
+        }
+        if ([Data[4] isEqual:@"1"]) {
+            if (isWork) {
+                pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期五"];
+             isWork = true;
+        }
+        if ([Data[5] isEqual:@"1"]) {
+            if (isWork) {
+                pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期六"];
+             isWork = true;
+        }
+        if ([Data[6] isEqual:@"1"]) {
+            if (isWork) {
+                pString = [NSString stringWithFormat:@"%@%@",pString,@","];
+            }
+            pString = [NSString stringWithFormat:@"%@%@",pString,@"星期七"];
+             isWork = true;
+        }
+    }
+    
+    return pString;
 }
 @end

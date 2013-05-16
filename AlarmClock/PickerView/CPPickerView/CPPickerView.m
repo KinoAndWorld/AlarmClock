@@ -44,7 +44,7 @@
 
 @implementation CPPickerView
 
-@synthesize dataSource;
+@synthesize dataSource,visibleViews;
 @synthesize delegate;
 @synthesize contentView;
 @synthesize glassImage, backgroundImage, shadowImage;
@@ -125,12 +125,12 @@
             self.backgroundImage = [[UIImage imageNamed:@"wheelBackground"] stretchableImageWithLeftCapWidth:0 topCapHeight:5];
             self.glassImage = [[UIImage imageNamed:@"stretchableGlass"]  stretchableImageWithLeftCapWidth:1 topCapHeight:0];
         }
-        self.shadowImage = [UIImage imageNamed:@"shadowOverlay"];
+     //   self.shadowImage = [UIImage imageNamed:@"shadowOverlay"];
         
         // Rounded borders
         self.layer.cornerRadius = 3.0f;
         self.clipsToBounds = YES;
-        self.layer.borderColor = [UIColor colorWithWhite:0.15 alpha:1.0].CGColor;
+        self.layer.borderColor = [UIColor colorWithWhite:0.15 alpha:0].CGColor;
         self.layer.borderWidth = 0.5f;
     }
     return self;

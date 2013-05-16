@@ -16,6 +16,7 @@
 #import "lame.h"
 #import "AlarmClockViewCon.h"
 #import "ClockManager.h"
+
 @implementation RootViewController
 
 @synthesize userInfo,tencentOAuthUserInfo,pPublicContentViewController,pFriendContentViewController;
@@ -46,6 +47,7 @@
     titleBack.frame = CGRectMake( 60,  titleBack.frame.origin.y, titleBack.frame.size.width ,  titleBack.frame.size.height);
 	[UIView commitAnimations];
    
+
 }
 -(IBAction)ChickFriend:(id)sender
 {
@@ -116,9 +118,6 @@
     [self.view sendSubviewToBack:pFriendContentViewController.view];
     [pFriendContentViewController.view setFrame:CGRectMake(0, 44, pFriendContentViewController.view.frame.size.width, pFriendContentViewController.view.frame.size.height)];
     
-    
-
-    
     NSString *appid = @"222222";
     _tencentOAuth = [[TencentOAuth alloc] initWithAppId:appid
 											andDelegate:self];
@@ -175,8 +174,65 @@
     recorderButton.hidden = NO;
     
     [self UpdataClockText];
+    
+    defaultPickerView = [[CPPickerView alloc] initWithFrame:CGRectMake(50, 5.0, 220, 35)];
+    defaultPickerView.backgroundColor = [UIColor clearColor];
+    defaultPickerView.dataSource = self;
+    defaultPickerView.delegate = self;
+    defaultPickerView.itemColor = [UIColor whiteColor];
+    UIFont *pFront = [UIFont fontWithName:nil size:100];
+    defaultPickerView.itemFont = pFront;
+    [defaultPickerView reloadData];
+    defaultPickerView.peekInset = UIEdgeInsetsMake(0, 80, 0, 80);
+    defaultPickerView.showGlass = YES;
+    [self.view addSubview:defaultPickerView];
 }
 
+#pragma mark - CPPickerViewDataSource
+
+- (NSInteger)numberOfItemsInPickerView:(CPPickerView *)pickerView
+{
+    return 3;
+}
+
+
+
+
+- (NSString *)pickerView:(CPPickerView *)pickerView titleForItem:(NSInteger)item
+{
+        if (item == 0) {
+            return @"公共";
+        }
+        else if (item == 1 ){
+            return @"好友";
+        }
+        else{
+            return @"私人";
+        }
+    
+    return nil;
+}
+
+
+
+
+#pragma mark - CPPickerViewDelegate
+
+- (void)pickerView:(CPPickerView *)pickerView didSelectItem:(NSInteger)item
+{
+    if (item == 0) {
+        pPublicContentViewController.view.hidden = NO;
+        pFriendContentViewController.view.hidden = YES;
+    }
+    else if (item == 1 ){
+        pPublicContentViewController.view.hidden = YES;
+        pFriendContentViewController.view.hidden = NO;
+    }
+    else{
+        pPublicContentViewController.view.hidden = NO;
+        pFriendContentViewController.view.hidden = YES;
+    }
+}
 
 #pragma mark -
 #pragma mark Rotation
@@ -504,7 +560,6 @@
     NSLog(@"==%@==",recordedFile);
     Text.text = @"松开完成";
     session = [AVAudioSession sharedInstance];
-    session.delegate = self;
     NSError *sessionError;
     [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&sessionError];
     
@@ -543,7 +598,7 @@
     YESButton.hidden = NO;
     NOButton.hidden = NO;
     recorderButton.hidden = YES;
-    
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
     Text.text = @"是否上传";
     [recorder stop];
     [NSThread detachNewThreadSelector:@selector(audio_PCMtoMP3) toTarget:self withObject:nil];
@@ -557,12 +612,11 @@
     NSError *playerError;
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[[NSURL alloc] initFileURLWithPath:cafFilePath] autorelease] error:&playerError];
     self.player = audioPlayer;
-    player.volume = 100.0f;
+    player.volume = 1.0;
     if (player == nil)
     {
         NSLog(@"ERror creating player: %@", [playerError description]);
     }
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategorySoloAmbient error: nil];
     player.delegate = self;
     [audioPlayer release];
     [player play];
@@ -632,8 +686,15 @@
     //Optionally for time zone converstions
     [formatter setTimeZone:[NSTimeZone timeZoneWithName:@"..."]];
     
-    NSString *stringFromDate = [formatter stringFromDate:[ClockManager GetRecentAlock]];
-    LeftText.text = stringFromDate;
+    NSDate *date = [ClockManager GetRecentAlock];
+    if (!date) {
+        LeftText.text = @"没有闹钟";
+    }
+    else{
+    NSString *stringFromDate = [formatter stringFromDate:date];
+        LeftText.text = stringFromDate;
+    }
+    
     [formatter release];
 }
 @end

@@ -12,4 +12,6 @@
 +(bool)ChickIsAlarmTime;
 +(NSTimeInterval)LastAlarmTime;
 +(NSDate *)GetRecentAlock;
++(bool)ChickISHaveRepeat:(NSArray *)pRepeatArray;
++(bool)ChickISSameClock:(NSDate *)date1 :(NSDate*)date2;
 @end

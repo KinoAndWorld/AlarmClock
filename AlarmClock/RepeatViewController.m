@@ -26,6 +26,7 @@
 -(IBAction)Done :(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+    [pAddClockCon.pTabelView reloadData ];
 }
 - (void)viewDidLoad
 {

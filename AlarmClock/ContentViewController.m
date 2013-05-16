@@ -235,7 +235,6 @@
     {
         NSLog(@"ERror creating player: %@", [playerError description]);
     }
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategorySoloAmbient error: nil];
     player.delegate = self;
   //  [audioPlayer release];
     [player play];
