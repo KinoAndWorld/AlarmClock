@@ -97,13 +97,27 @@
              
              cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CustomCellIdentifier] autorelease];
          }
-         cell.backgroundColor = [UIColor clearColor];
-         
+        // cell.backgroundColor = [UIColor lightTextColor];
+         for (UIView *lable in [cell subviews]) {
+                 [lable removeFromSuperview];
+         }
+         UIView *pBg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 39)];
+       //  cell.backgroundView = pBg;
+         [cell addSubview:pBg];
+         pBg.backgroundColor = [UIColor lightTextColor];
          UIButton *pButton = [UIButton buttonWithType:UIButtonTypeCustom];
-         [pButton setBackgroundImage:[UIImage imageNamed:@"ui_addButton.png"] forState:UIControlStateNormal];
+         pButton.frame = CGRectMake(0, 0, 320, 40);
          [cell addSubview:pButton];
          [pButton addTarget:self action:@selector(AddClock:) forControlEvents:UIControlEventTouchUpInside];
-         pButton.frame = CGRectMake(60, 5, 200, 30);
+         
+         UILabel *pLable = [[UILabel alloc] initWithFrame:CGRectMake(15, 10, 100, 20)];
+         pLable.textAlignment   = NSTextAlignmentLeft;
+         pLable.backgroundColor = [UIColor clearColor];
+         pLable.textColor = [UIColor blackColor];
+         pLable.tag = 123;
+         [cell addSubview:pLable];
+         pLable.text = @"添加新闹钟";
+         [pLable release];
          return cell;
      }
     AlarmClockCell *cell = nil;

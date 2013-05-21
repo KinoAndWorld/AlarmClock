@@ -174,64 +174,6 @@
     recorderButton.hidden = NO;
     
     [self UpdataClockText];
-    
-    defaultPickerView = [[CPPickerView alloc] initWithFrame:CGRectMake(50, 5.0, 220, 35)];
-    defaultPickerView.backgroundColor = [UIColor clearColor];
-    defaultPickerView.dataSource = self;
-    defaultPickerView.delegate = self;
-    defaultPickerView.itemColor = [UIColor whiteColor];
-    UIFont *pFront = [UIFont fontWithName:nil size:100];
-    defaultPickerView.itemFont = pFront;
-    [defaultPickerView reloadData];
-    defaultPickerView.peekInset = UIEdgeInsetsMake(0, 80, 0, 80);
-    defaultPickerView.showGlass = YES;
-    [self.view addSubview:defaultPickerView];
-}
-
-#pragma mark - CPPickerViewDataSource
-
-- (NSInteger)numberOfItemsInPickerView:(CPPickerView *)pickerView
-{
-    return 3;
-}
-
-
-
-
-- (NSString *)pickerView:(CPPickerView *)pickerView titleForItem:(NSInteger)item
-{
-        if (item == 0) {
-            return @"公共";
-        }
-        else if (item == 1 ){
-            return @"好友";
-        }
-        else{
-            return @"私人";
-        }
-    
-    return nil;
-}
-
-
-
-
-#pragma mark - CPPickerViewDelegate
-
-- (void)pickerView:(CPPickerView *)pickerView didSelectItem:(NSInteger)item
-{
-    if (item == 0) {
-        pPublicContentViewController.view.hidden = NO;
-        pFriendContentViewController.view.hidden = YES;
-    }
-    else if (item == 1 ){
-        pPublicContentViewController.view.hidden = YES;
-        pFriendContentViewController.view.hidden = NO;
-    }
-    else{
-        pPublicContentViewController.view.hidden = NO;
-        pFriendContentViewController.view.hidden = YES;
-    }
 }
 
 #pragma mark -

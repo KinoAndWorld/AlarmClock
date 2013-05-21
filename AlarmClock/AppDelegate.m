@@ -187,7 +187,7 @@
     NSTimeInterval time = [ClockManager LastAlarmTime];
     if (time <= 0 ) {
         NSLog(@"no Alarm");
-        [pClockInfo setObject:NULL forKey:@"clockData"];
+        [pClockInfo removeObjectForKey:@"clockData"];
     }
     else{
         NSLog(@"next Alarm: %@",[NSDate dateWithTimeIntervalSinceNow:time]);
@@ -247,15 +247,17 @@
     NSDate *date = [clockInfo objectForKey:@"clockData"];
     NSLog(@"clockInfo:%@",clockInfo);
     
-    NSArray *pCLockArray = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
-    for (NSMutableDictionary *pDic in pCLockArray) {
-        if ([ClockManager  ChickISSameClock:[pDic objectForKey:@"data"] :date] && ![ClockManager ChickISHaveRepeat:[pDic objectForKey:@"repeat"]] ) {
-            [pDic setObject:@"0" forKey:@"isOpen"];
-            NSLog(@"clock is change");
+    if (isAlarmBegin) {
+        NSArray *pCLockArray = [[NSUserDefaults standardUserDefaults] objectForKey:UserClock];
+        for (NSMutableDictionary *pDic in pCLockArray) {
+            if ([ClockManager  ChickISSameClock:[pDic objectForKey:@"data"] :date] && ![ClockManager ChickISHaveRepeat:[pDic objectForKey:@"repeat"]] ) {
+                [pDic setObject:@"0" forKey:@"isOpen"];
+                NSLog(@"clock is change");
+            }
         }
+        NSLog(@"pCLockArray:%@",pCLockArray);
+        [[NSUserDefaults standardUserDefaults] setObject:pCLockArray forKey:UserClock];
     }
-    NSLog(@"pCLockArray:%@",pCLockArray);
-    [[NSUserDefaults standardUserDefaults] setObject:pCLockArray forKey:UserClock];
     
     [pRootViewCon UpdataClockText];
 }

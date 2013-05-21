@@ -9,6 +9,8 @@
 #import "AlarmClockCell.h"
 #include "AddClockCon.h"
 #include "Config.h"
+
+#define theRightPos  15
 @implementation AlarmClockCell
 @synthesize ClockInfo;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -24,21 +26,22 @@
         [self addSubview:Swish];
         [Swish addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
         
-        Time = [[UILabel alloc] initWithFrame:CGRectMake(42, 24, 100, 20)];
+        Time = [[UILabel alloc] initWithFrame:CGRectMake(theRightPos, 24, 100, 20)];
         Time.backgroundColor = [UIColor clearColor];
         Time.font = [UIFont boldSystemFontOfSize:24];
         Time.text = @"7:00";
         Time.textColor = [UIColor colorWithWhite:0.2 alpha:255];
         [self addSubview:Time];
         
-        AM = [[UILabel alloc] initWithFrame:CGRectMake(10, 24, 100, 20)];
+        AM = [[UILabel alloc] initWithFrame:CGRectMake(theRightPos, 24, 100, 20)];
         AM.backgroundColor = [UIColor clearColor];
         AM.font = [UIFont systemFontOfSize:15];
         AM.text = @"上午";
         AM.textColor = [UIColor colorWithWhite:0.3 alpha:255];
         [self addSubview:AM];
+        AM.hidden = YES;
         
-        Tag = [[UILabel alloc] initWithFrame:CGRectMake(10, 44, 100, 20)];
+        Tag = [[UILabel alloc] initWithFrame:CGRectMake(theRightPos, 44, 100, 20)];
         Tag.backgroundColor = [UIColor clearColor];
         Tag.font = [UIFont systemFontOfSize:15];
         Tag.text = @"闹钟";
@@ -46,7 +49,7 @@
         [self addSubview:Tag];
         
         
-        Info = [[UILabel alloc] initWithFrame:CGRectMake(10, 64,300, 20)];
+        Info = [[UILabel alloc] initWithFrame:CGRectMake(theRightPos, 64,300, 20)];
         Info.backgroundColor = [UIColor clearColor];
         Info.font = [UIFont systemFontOfSize:15];
         Info.text = @"永不";
@@ -113,7 +116,6 @@
     else{
         [Swish setOn:NO];
     }
-    
 
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -131,7 +133,7 @@
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 		[UIView setAnimationDuration:0.3];
 		
-		Time.frame = CGRectMake(72, Time.frame.origin.y, Time.frame.size.width, Time.frame.size.height);
+		Time.frame = CGRectMake(40, Time.frame.origin.y, Time.frame.size.width, Time.frame.size.height);
 		AM.frame = CGRectMake(40, AM.frame.origin.y, AM.frame.size.width, AM.frame.size.height);
 		Tag.frame = CGRectMake(40, Tag.frame.origin.y, Tag.frame.size.width, Tag.frame.size.height);
         Info.frame = CGRectMake(40, Info.frame.origin.y, Info.frame.size.width, Info.frame.size.height);
@@ -147,10 +149,10 @@
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 		[UIView setAnimationDuration:0.3];
 		
-		Time.frame = CGRectMake(42, Time.frame.origin.y, Time.frame.size.width, Time.frame.size.height);
-		AM.frame = CGRectMake(10, AM.frame.origin.y, AM.frame.size.width, AM.frame.size.height);
-		Tag.frame = CGRectMake(10, Tag.frame.origin.y, Tag.frame.size.width, Tag.frame.size.height);
-          Info.frame = CGRectMake(10, Info.frame.origin.y, Info.frame.size.width, Info.frame.size.height);
+		Time.frame = CGRectMake(theRightPos, Time.frame.origin.y, Time.frame.size.width, Time.frame.size.height);
+		AM.frame = CGRectMake(theRightPos, AM.frame.origin.y, AM.frame.size.width, AM.frame.size.height);
+		Tag.frame = CGRectMake(theRightPos, Tag.frame.origin.y, Tag.frame.size.width, Tag.frame.size.height);
+          Info.frame = CGRectMake(theRightPos, Info.frame.origin.y, Info.frame.size.width, Info.frame.size.height);
         Swish.frame = CGRectMake(220, Swish.frame.origin.y, Swish.frame.size.width, Swish.frame.size.height);
 		Swish.alpha = 1;
         pAcc.frame = CGRectMake(330, pAcc.frame.origin.y, pAcc.frame.size.width, pAcc.frame.size.height);

@@ -11,11 +11,10 @@
 #import "SinaWeiboRequest.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <AVFoundation/AVFoundation.h>
-#import "CPPickerView.h"
 @class ContentViewController;
 @class FriendCotentViewCon;
 @class AlarmClockViewCon;
-@interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate,CPPickerViewDataSource, CPPickerViewDelegate>
+@interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate>
 {
     NSDictionary *userInfo;
     NSArray *statuses;
@@ -32,8 +31,6 @@
     NSURL *recordedFile;
     AVAudioPlayer *player;
     AVAudioRecorder *recorder;
-    
-    CPPickerView *defaultPickerView;
 }
 @property (readonly, nonatomic) NSDictionary *userInfo;
 @property (readonly, nonatomic) ContentViewController *pPublicContentViewController;

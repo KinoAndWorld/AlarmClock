@@ -94,21 +94,6 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1) {
-        
-        CPPickerViewCell* cell2 = nil;
-        cell2 = [[CPPickerViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-        cell2.textLabel.text = @"闹铃频道";
-        cell2.dataSource = self;
-        cell2.delegate = self;
-        cell2.currentIndexPath = indexPath;
-        cell2.peekInset = UIEdgeInsetsMake(0, 55, 0, 55);
-        [cell2 reloadData];
-        cell2.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        [cell2 selectItemAtIndex:1 animated:NO];
-        return cell2;
-    }
     
     UITableViewCell *cell = nil;
     static NSString *CustomCellIdentifier = @"AlarmClockCell";
@@ -145,6 +130,24 @@
              pLable.text = @"永不";
         }
         [pLable release];
+    }
+     else if (indexPath.row == 1) {
+         cell.textLabel.text = @"闹铃频道";
+         cell.accessoryType = UITableViewCellAccessoryNone;
+         for (UISwitch *lable in [cell subviews]) {
+             if (lable.tag == 123) {
+                 [lable removeFromSuperview];
+                 break;
+             }
+         }
+         UILabel *pLable = [[UILabel alloc] initWithFrame:CGRectMake(rightLablePosX-200, rightLablePosY, 230, 25)];
+         pLable.textAlignment   = NSTextAlignmentRight;
+         pLable.backgroundColor = [UIColor clearColor];
+         pLable.textColor = [UIColor redColor];
+         pLable.tag = 123;
+         [cell addSubview:pLable];
+        pLable.text = @"公共";
+         [pLable release];
     }
     else if (indexPath.row == 2) {
         cell.textLabel.text = @"小睡";
