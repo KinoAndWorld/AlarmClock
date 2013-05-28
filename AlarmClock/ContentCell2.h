@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EMAsyncImageView.h"
-@interface ContentCell : UITableViewCell
+@interface ContentCell2 : UITableViewCell
 @property (nonatomic, retain) IBOutlet EMAsyncImageView 	*picView;
 @property (nonatomic, retain) IBOutlet UILabel 	*Text;
 @property (nonatomic, retain) IBOutlet UILabel 	*FriendNum;

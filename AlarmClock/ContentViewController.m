@@ -154,7 +154,7 @@
             && [[[[NSUserDefaults standardUserDefaults] objectForKey:UserInfoData] objectForKey:@"status"] isEqualToString:logInTag]) {
             // chick user is login
             static NSString *CustomCellIdentifier = @"ContentHeadCell_logIn";
-            cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+           // cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
             if (cell == nil) {
                 NSString *NIBName =@"ContentHeadCell_logIn";
                 NSArray *nib = [[NSBundle mainBundle]loadNibNamed:NIBName owner:self options:nil];
@@ -170,7 +170,7 @@
         }
         else{
             static NSString *CustomCellIdentifier = @"ContentHeadCell";
-            cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+           // cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
             if (cell == nil) {
             NSString *NIBName =@"ContentHeadCell";
             NSArray *nib = [[NSBundle mainBundle]loadNibNamed:NIBName owner:self options:nil];
@@ -182,7 +182,7 @@
     }
     else {
         static NSString *CustomCellIdentifier = @"ContentCell";
-        cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+        //cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
         if (cell == nil) {
             NSString *NIBName =@"ContentCell";
             NSArray *nib = [[NSBundle mainBundle]loadNibNamed:NIBName owner:self options:nil];
@@ -190,6 +190,7 @@
         }
    
         [((ContentCell*)cell).Text setText:[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"nikeName"]];
+        [((ContentCell*)cell).FriendNum setText:[NSString stringWithFormat:@"%@",[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"friendNum"]] ];
         
         if ([[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"userImg"] != nil && [[[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"userImg"] length] > 0) {
              ((ContentCell*)cell).picView.imageUrl = [[pContentArr objectAtIndex:indexPath.row - 1] objectForKey:@"userImg"];
@@ -230,7 +231,7 @@
     NSError *playerError;
     AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[[[NSURL alloc] initFileURLWithPath:cafFilePath] autorelease] error:&playerError];
     player = audioPlayer;
-    player.volume = 100.0f;
+    player.volume = 1.0f;
     if (player == nil)
     {
         NSLog(@"ERror creating player: %@", [playerError description]);

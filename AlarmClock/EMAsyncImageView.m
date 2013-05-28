@@ -114,7 +114,10 @@
 		self.image = nil;
 		return;
 	}
-
+    NSLog(@"imageUrl:%@",imageUrl);
+    if (imageUrl && [imageUrl isEqualToString:url] ) {
+        return;
+    }
 	imageUrl = url;
 	
 	NSArray *urlParts = [url componentsSeparatedByString:@"?"];

@@ -14,7 +14,7 @@
 @class ContentViewController;
 @class FriendCotentViewCon;
 @class AlarmClockViewCon;
-@interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate>
+@interface RootViewController : UIViewController<SinaWeiboDelegate, SinaWeiboRequestDelegate,TencentSessionDelegate,AVAudioPlayerDelegate,AVAudioSessionDelegate,AVAudioRecorderDelegate>
 {
     NSDictionary *userInfo;
     NSArray *statuses;
@@ -49,6 +49,8 @@
 -(void)RefrshDataWithUserInfoType :(NSString*) userType;
 +(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status;
 + (NSDictionary *)getUserData;
++(bool)ChickIsLogIn;
 +(void)ReloadAllData;
 -(void)UpdataClockText;
+-(void)ChickWhichViewIsappear;
 @end

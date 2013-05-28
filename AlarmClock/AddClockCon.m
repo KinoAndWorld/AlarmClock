@@ -46,10 +46,9 @@
     
     NSLog(@"%@",pTempArray2);
     
+    [ClockCell.pTableView setEditing:NO animated:NO];
     [ClockCell loadData];
     [ClockCell.pTableView reloadData];
-    
-    
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 user. All rights reserved.
 //
 
-#import "ContentCell.h"
+#import "ContentCell2.h"
 #import "ASIFormDataRequest.h"
 #import "Config.h"
-@implementation ContentCell
+@implementation ContentCell2
 
 @synthesize picView,Text,PlaySoundButton,pString,ID,FriendNum;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -26,6 +26,10 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+-(void)dealloc
+{
+    [super dealloc];
 }
 -(IBAction)PlaySound:(id)sender
 {

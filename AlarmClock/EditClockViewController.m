@@ -44,6 +44,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     
+    [ClockCell.pTableView setEditing:NO animated:NO];
     [ClockCell loadData];
     [ClockCell.pTableView reloadData];
 }

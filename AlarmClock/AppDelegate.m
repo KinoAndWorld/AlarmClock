@@ -148,6 +148,7 @@
         audioPlayer1.volume = 1;
         
         [audioPlayer1 play];
+        
     }
    
 }
@@ -222,6 +223,7 @@
     UILocalNotification* alarm = [[[UILocalNotification alloc] init] autorelease];
     if (alarm)
     {
+        NSLog(@"begin alarm");
         alarm.fireDate = [NSDate date];
         alarm.timeZone = [NSTimeZone defaultTimeZone];
         alarm.repeatInterval = 0;
@@ -232,6 +234,9 @@
         //   [audioPlayer playAtTime:audioPlayer.deviceCurrentTime + time];
        // [theQueuePlayer advanceToNextItem];
         [theQueuePlayer play];
+        MPMusicPlayerController *mpc = [MPMusicPlayerController applicationMusicPlayer];
+        mpc.volume = 1.0;  //0.0~1.0
+        
          isAlarmBegin = YES;
         
     }

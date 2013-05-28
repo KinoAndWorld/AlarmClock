@@ -16,7 +16,7 @@
 #import "lame.h"
 #import "AlarmClockViewCon.h"
 #import "ClockManager.h"
-
+#import "AddFriendViewController.h"
 @implementation RootViewController
 
 @synthesize userInfo,tencentOAuthUserInfo,pPublicContentViewController,pFriendContentViewController;
@@ -36,6 +36,7 @@
     [pPublicContentViewController.tableView reloadData];
     [pFriendContentViewController.tableView reloadData];
     [pFriendContentViewController refreshView];
+    [self ChickWhichViewIsappear];
 }
 -(IBAction)ChickPublic:(id)sender
 {
@@ -49,30 +50,29 @@
    
 
 }
--(IBAction)ChickFriend:(id)sender
+-(IBAction)AddFriend:(id)sender
 {
-    pPublicContentViewController.view.hidden = YES;
-     pFriendContentViewController.view.hidden = NO;
-    [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.05];
-	[UIView setAnimationDelegate:self];
-    titleBack.frame = CGRectMake( 127,  titleBack.frame.origin.y, titleBack.frame.size.width ,  titleBack.frame.size.height);
-	[UIView commitAnimations];
+    AddFriendViewController *pAddFriend = [[AddFriendViewController alloc] initWithNibName:@"AddFriendViewController" bundle:nil];
+    [self.navigationController   pushViewController:pAddFriend animated:YES];
  
 }
--(IBAction)ChickPrivate:(id)sender
+-(void)ChickWhichViewIsappear
 {
-    [UIView beginAnimations:nil context:nil];
-	[UIView setAnimationDuration:0.05];
-	[UIView setAnimationDelegate:self];
-    titleBack.frame = CGRectMake( 200,  titleBack.frame.origin.y, titleBack.frame.size.width ,  titleBack.frame.size.height);
-	[UIView commitAnimations];
+    if ([RootViewController ChickIsLogIn]) {
+        pPublicContentViewController.view.hidden = YES;
+        pFriendContentViewController.view.hidden = NO;
+    }
+    else{
+        pPublicContentViewController.view.hidden = NO;
+        pFriendContentViewController.view.hidden = YES;
+    }
 }
 +(void)ReloadAllData
 {
     [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pPublicContentViewController.tableView reloadData];
     [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pFriendContentViewController.tableView reloadData];
     [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon.pFriendContentViewController refreshView];
+    [((AppDelegate*)[UIApplication sharedApplication].delegate).pRootViewCon ChickWhichViewIsappear];
 }
 
 +(void)SetUserInfoData:(NSString*)ID name:(NSString*) name faceImg:(NSString*) faceImg typeString:(NSString*) typeString status:(NSString*)status
@@ -174,6 +174,8 @@
     recorderButton.hidden = NO;
     
     [self UpdataClockText];
+    
+     [self ChickWhichViewIsappear];
 }
 
 #pragma mark -
@@ -533,22 +535,55 @@
     recorder = [[AVAudioRecorder alloc] initWithURL:recordedFile settings:settings error:nil];
     [recorder prepareToRecord];
     [recorder record];
+    recorder.delegate = self;
+    recorder.meteringEnabled = YES;
     [settings release];
+}
+- (void)updateMeters
+{
+ NSLog(@"%f",[recorder averagePowerForChannel:1]);
+}
+- (float)averagePowerForChannel:(NSUInteger)channelNumber
+{
+  //  NSLog(@"<#string#>")
 }
 -(void)touchUp
 {
-    YESButton.hidden = NO;
-    NOButton.hidden = NO;
-    recorderButton.hidden = YES;
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    Text.text = @"是否上传";
+    bool isWorkVoice= YES;
+    [recorder updateMeters];
+    NSLog(@"最高：%f",[recorder peakPowerForChannel:0]);
+    NSLog(@"平均：%f",[recorder averagePowerForChannel:0]);
+      if (recorder.currentTime < 1.5) {
+          Text.text = @"声音太短";
+          isWorkVoice = NO;
+      }
+      else if([recorder peakPowerForChannel:0] < -24 || [recorder averagePowerForChannel:0]<-40)
+    {
+        Text.text = @"声音太小";
+        isWorkVoice = NO;
+    }
+      else{
+          YESButton.hidden = NO;
+          NOButton.hidden = NO;
+          recorderButton.hidden = YES;
+          [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+          Text.text = @"是否上传";
+      }
+
     [recorder stop];
-    [NSThread detachNewThreadSelector:@selector(audio_PCMtoMP3) toTarget:self withObject:nil];
+    
+    
     if(recorder)
     {
         [recorder release];
         recorder = nil;
     }
+    
+    if (!isWorkVoice) {
+        return;
+    }
+    
+    [NSThread detachNewThreadSelector:@selector(audio_PCMtoMP3) toTarget:self withObject:nil];
     NSString *cafFilePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/downloadFile.caf"];
     
     NSError *playerError;
@@ -562,6 +597,7 @@
     player.delegate = self;
     [audioPlayer release];
     [player play];
+    
     
 }
 
@@ -638,5 +674,12 @@
     }
     
     [formatter release];
+}
++(bool)ChickIsLogIn
+{
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:UserInfoData] && [[[[NSUserDefaults standardUserDefaults] objectForKey:UserInfoData] objectForKey:@"status"] isEqualToString:logInTag]) {
+        return YES;
+    }
+    return NO;
 }
 @end

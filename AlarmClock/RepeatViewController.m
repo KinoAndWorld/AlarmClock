@@ -104,13 +104,14 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableArray *pAr = [pAddClockCon.pClockDataDic objectForKey:@"repeat"];
+    NSMutableArray *pAr = [NSMutableArray arrayWithArray:[pAddClockCon.pClockDataDic objectForKey:@"repeat"]];
     if ([[pAr objectAtIndex:indexPath.row] isEqual:@"0"]) {
         [pAr setObject:@"1" atIndexedSubscript:indexPath.row];
     }
     else{
         [pAr setObject:@"0" atIndexedSubscript:indexPath.row];
     }
+    [pAddClockCon.pClockDataDic setObject:pAr forKey:@"repeat"];
     [pTabelView reloadData];
 }
 

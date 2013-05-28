@@ -122,7 +122,7 @@
      }
     AlarmClockCell *cell = nil;
     static NSString *CustomCellIdentifier = @"AlarmClockCell";
-    cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
+   // cell = [tableView dequeueReusableCellWithIdentifier:CustomCellIdentifier];
     if (cell == nil) {
         cell = [[[AlarmClockCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CustomCellIdentifier] autorelease];
         cell.ClockInfo = [pDataDic objectAtIndex:indexPath.row - 1];
